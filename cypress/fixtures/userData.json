@@ -1,11 +1,45 @@
-    {
-      "valid": {
-        "username": "Admin",
-        "password": "admin123"
-      },
-      "invalid": {
-        "username": "Test",
-        "password": "admin1234"
-      }
+{
+  "users": {
+    "admin": {
+      "username": "Admin",
+      "password": "admin123",
+      "role": "Admin"
+    },
+    "employee": {
+      "username": "employee01",
+      "password": "emp123",
+      "role": "Employee"
+    },
+    "hrManager": {
+      "username": "hrmanager",
+      "password": "hr123",
+      "role": "HR Manager"
     }
-  
+  },
+  "employees": {
+    "newEmployee": {
+      "firstName": "Carlos",
+      "lastName": "Oliveira",
+      "employeeId": "EMP2024001",
+      "email": "carlos.oliveira@company.com",
+      "phone": "+55 11 99999-9999"
+    },
+    "updateEmployee": {
+      "firstName": "Ana",
+      "lastName": "Costa",
+      "employeeId": "EMP2024002",
+      "email": "ana.costa@company.com"
+    }
+  },
+  "timesheet": {
+    "project": "Desenvolvimento Web",
+    "activity": "Codificação",
+    "hours": "8.00"
+  },
+  "leave": {
+    "type": "Annual",
+    "fromDate": "2024-12-01",
+    "toDate": "2024-12-05",
+    "reason": "Férias planejadas"
+  }
+}
