@@ -35,11 +35,5 @@
     "project": "Desenvolvimento Web",
     "activity": "Codificação",
     "hours": "8.00"
-  },
-  "leave": {
-    "type": "Annual",
-    "fromDate": "2024-12-01",
-    "toDate": "2024-12-05",
-    "reason": "Férias planejadas"
   }
 }
