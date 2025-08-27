@@ -1,4 +1,17 @@
 describe('Testes de Rastreamento de Tempo', () => {
+  const selectors = {
+    timesheetsTab: '.oxd-topbar-body-nav-tab-item',
+    formRow: '.oxd-form-row',
+    employeeNameInput: 'input[placeholder="Type for hints..."]',
+    autocompleteOption: '.oxd-autocomplete-option',
+    viewButton: 'button.oxd-button',
+    editButton: 'button.oxd-button',
+    projectInput: 'input[placeholder="Type for hints..."]',
+    submitButton: 'button[type="submit"]',
+    toastMessage: '.oxd-toast',
+    body: 'body',
+  };
+
   beforeEach(() => {
     cy.login();
   });
@@ -6,47 +19,38 @@ describe('Testes de Rastreamento de Tempo', () => {
   it('Deve criar uma entrada de timesheet', () => {
     cy.visit('/time/viewTimeModule');
     
-    // Melhorar a navegação e seletores
-    cy.get('.oxd-topbar-body-nav-tab-item').contains('Timesheets').click();
+    cy.get(selectors.timesheetsTab).contains('Timesheets').click();
+    cy.get(selectors.formRow, { timeout: 10000 }).should('be.visible');
     
-    // Aguardar carregamento da página
-    cy.get('.oxd-form-row', { timeout: 10000 }).should('be.visible');
-    
-    cy.get('input[placeholder="Type for hints..."]').type('John');
+    cy.get(selectors.employeeNameInput).type('John');
     cy.wait(3000);
     
-    // Verificar se há opções de autocomplete
-    cy.get('body').then(($body) => {
-      if ($body.find('.oxd-autocomplete-option').length > 0) {
-        cy.get('.oxd-autocomplete-option').first().click();
+    cy.get(selectors.body).then(($body) => {
+      if ($body.find(selectors.autocompleteOption).length > 0) {
+        cy.get(selectors.autocompleteOption).first().click();
         cy.wait(1000);
-        cy.get('button.oxd-button').contains('View').click();
+        cy.get(selectors.viewButton).contains('View').click();
 
-        // Verificar se há timesheet para editar
-        cy.get('body').then(($body) => {
-          if ($body.find('button.oxd-button:contains("Edit")').length > 0) {
-            cy.get('button.oxd-button').contains('Edit').click();
+        cy.get(selectors.body).then(($body) => {
+          if ($body.find(selectors.editButton).filter(':contains("Edit")').length > 0) {
+            cy.get(selectors.editButton).contains('Edit').click();
             
-            // Preencher informações do projeto
-            cy.get('input[placeholder="Type for hints..."]').eq(1).type('ACME');
+            cy.get(selectors.projectInput).eq(1).type('ACME');
             cy.wait(2000);
             
-            // Verificar se há opções de autocomplete para empresa
-            cy.get('body').then(($body) => {
-              if ($body.find('.oxd-autocomplete-option:contains("ACME")').length > 0) {
-                cy.get('.oxd-autocomplete-option').contains('ACME').click();
+            cy.get(selectors.body).then(($body) => {
+              if ($body.find(selectors.autocompleteOption).filter(':contains("ACME")').length > 0) {
+                cy.get(selectors.autocompleteOption).contains('ACME').click();
                 
-                cy.get('input[placeholder="Type for hints..."]').eq(2).type('Project');
+                cy.get(selectors.projectInput).eq(2).type('Project');
                 cy.wait(2000);
                 
-                // Verificar se há opções de autocomplete para projeto
-                cy.get('body').then(($body) => {
-                  if ($body.find('.oxd-autocomplete-option:contains("ACME")').length > 0) {
-                    cy.get('.oxd-autocomplete-option').contains('ACME').first().click();
-                    cy.get('button[type="submit"]').click();
+                cy.get(selectors.body).then(($body) => {
+                  if ($body.find(selectors.autocompleteOption).filter(':contains("ACME")').length > 0) {
+                    cy.get(selectors.autocompleteOption).contains('ACME').first().click();
+                    cy.get(selectors.submitButton).click();
 
-                    // Verificar sucesso
-                    cy.get('.oxd-toast', { timeout: 10000 })
+                    cy.get(selectors.toastMessage, { timeout: 10000 })
                       .should('be.visible')
                       .and('contain.text', 'Success');
                   } else {
