@@ -33,6 +33,25 @@ describe('Testes de Autenticação', () => {
     cy.get(selectors.errorMessage).should('contain.text', 'Required');
   });
 
+  it('Deve exibir erro ao preencher apenas o usuário', () => {
+    cy.get(selectors.usernameField).type('Admin');
+    cy.get(selectors.submitButton).click();
+    cy.get(selectors.errorMessage).should('contain.text', 'Required');
+  });
+
+  it('Deve exibir erro ao preencher apenas a senha', () => {
+    cy.get(selectors.passwordField).type('admin123');
+    cy.get(selectors.submitButton).click();
+    cy.get(selectors.errorMessage).should('contain.text', 'Required');
+  });
+
+    it('Deve fazer login com username em minúsculas (case-insensitive)', () => {
+    cy.get(selectors.usernameField).type('admin');
+    cy.get(selectors.passwordField).type('admin123');
+    cy.get(selectors.submitButton).click();
+    cy.url().should('include', '/dashboard');
+  });
+
   it('Deve funcionar com navegação por teclado', () => {
     cy.get(selectors.usernameField).focus().tab();
     cy.focused().should('have.attr', 'name', 'password');

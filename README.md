@@ -74,15 +74,15 @@ npx cypress run --spec "cypress/e2e/user.spec.cy.js"
 
 ### ✅ Status Atual: Todos os Testes Passando
 
-**Última Execução**: 16 testes executados com 100% de sucesso
+**Última Execução**: 19 testes executados com 100% de sucesso
 
 | Arquivo | Testes | Aprovados | Falharam | Duração |
 |---------|--------|-----------|----------|---------|
 | `admin.spec.cy.js` | 1 | ✅ 1 | ❌ 0 | 13s |
 | `timesheet.spec.cy.js` | 1 | ✅ 1 | ❌ 0 | 10s |
-| `user.spec.cy.js` | 14 | ✅ 14 | ❌ 0 | 1m 5s |
+| `user.spec.cy.js` | 17 | ✅ 17 | ❌ 0 | ~1m 48s |
 
-**Total**: 16/16 testes aprovados (100% de taxa de sucesso)
+**Total**: 19/19 testes aprovados (100% de taxa de sucesso)
 
 ## 🧪 Cenários de Teste
 
@@ -93,6 +93,9 @@ npx cypress run --spec "cypress/e2e/user.spec.cy.js"
 | **Login Válido** | Testa login com credenciais corretas (Admin/admin123) | ✅ Aprovado |
 | **Login Inválido** | Testa login com credenciais incorretas e valida mensagem de erro | ✅ Aprovado |
 | **Campos Obrigatórios** | Valida mensagens de erro para campos não preenchidos | ✅ Aprovado |
+| **Login Apenas com Usuário** | Valida erro ao submeter apenas com o campo de usuário | ✅ Aprovado |
+| **Login Apenas com Senha** | Valida erro ao submeter apenas com o campo de senha | ✅ Aprovado |
+| **Login Case-Insensitive** | Testa que o login é bem-sucedido com username em minúsculas | ✅ Aprovado |
 | **Navegação por Teclado** | Testa funcionalidade de navegação usando Tab | ✅ Aprovado |
 | **API de Login** | Valida endpoint de autenticação via requisição HTTP | ✅ Aprovado |
 | **Esqueceu Senha** | Testa fluxo completo de recuperação de senha | ✅ Aprovado |
@@ -133,7 +136,7 @@ npx cypress run --spec "cypress/e2e/user.spec.cy.js"
 ### TC-001: Fluxo Completo de Autenticação
 - **Objetivo**: Verificar todo o processo de autenticação
 - **Cobertura**: Login, logout, recuperação de senha, validações
-- **Resultado**: 8/8 cenários aprovados
+- **Resultado**: 11/11 cenários aprovados
 
 ### TC-002: Gerenciamento de Funcionários
 - **Objetivo**: Validar CRUD de funcionários
@@ -167,9 +170,9 @@ npx cypress run --spec "cypress/e2e/user.spec.cy.js"
 
 ### Cobertura de Testes
 - **Módulos Testados**: 4 (Autenticação, Usuários, Admin, Timesheet)
-- **Funcionalidades Cobertas**: 16 cenários críticos
+- **Funcionalidades Cobertas**: 19 cenários críticos
 - **Taxa de Sucesso**: 100%
-- **Tempo Total de Execução**: ~1m 28s
+- **Tempo Total de Execução**: ~2m 13s
 
 ### Qualidade dos Testes
 - Uso de Page Object Model
@@ -179,6 +182,7 @@ npx cypress run --spec "cypress/e2e/user.spec.cy.js"
 
 ## 🚀 Melhorias Implementadas
 
+- ✅ Maior cobertura de testes de login com casos de borda.
 - ✅ Suporte completo à funcionalidade "Esqueceu Senha"
 - ✅ Validações robustas para campos obrigatórios
 - ✅ Testes de API integrados aos testes de UI
