@@ -22,7 +22,7 @@ Este projeto contém uma suíte completa de testes automatizados desenvolvida co
 ## 🏗️ Estrutura do Projeto
 
 ```
-project-orange-hrm-tests-lume1/
+project-orange-hrm-tests-lume/
 ├── cypress/
 │   ├── e2e/
 │   │   ├── admin.spec.cy.js         # Testes do módulo administrativo
@@ -51,7 +51,7 @@ project-orange-hrm-tests-lume1/
 git clone [url-do-repositorio]
 
 # Entre no diretório
-cd project-orange-hrm-tests-lume1
+cd project-orange-hrm-tests-lume
 
 # Instale as dependências
 npm install
