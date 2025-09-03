@@ -1,0 +1,289 @@
+﻿2025-09-03T14:32:19.2138410Z Current runner version: '2.328.0'
+2025-09-03T14:32:19.2161043Z ##[group]Runner Image Provisioner
+2025-09-03T14:32:19.2161921Z Hosted Compute Agent
+2025-09-03T14:32:19.2162486Z Version: 20250829.383
+2025-09-03T14:32:19.2163044Z Commit: 27cb235aab5b0e52e153a26cd86b4742e89dac5d
+2025-09-03T14:32:19.2163767Z Build Date: 2025-08-29T13:48:48Z
+2025-09-03T14:32:19.2164327Z ##[endgroup]
+2025-09-03T14:32:19.2164878Z ##[group]Operating System
+2025-09-03T14:32:19.2165386Z Ubuntu
+2025-09-03T14:32:19.2165925Z 24.04.3
+2025-09-03T14:32:19.2166382Z LTS
+2025-09-03T14:32:19.2166936Z ##[endgroup]
+2025-09-03T14:32:19.2167478Z ##[group]Runner Image
+2025-09-03T14:32:19.2168012Z Image: ubuntu-24.04
+2025-09-03T14:32:19.2168494Z Version: 20250831.1.0
+2025-09-03T14:32:19.2169521Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250831.1/images/ubuntu/Ubuntu2404-Readme.md
+2025-09-03T14:32:19.2171048Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250831.1
+2025-09-03T14:32:19.2172371Z ##[endgroup]
+2025-09-03T14:32:19.2173392Z ##[group]GITHUB_TOKEN Permissions
+2025-09-03T14:32:19.2175218Z Contents: read
+2025-09-03T14:32:19.2175717Z Metadata: read
+2025-09-03T14:32:19.2176208Z Packages: read
+2025-09-03T14:32:19.2176895Z ##[endgroup]
+2025-09-03T14:32:19.2179243Z Secret source: Actions
+2025-09-03T14:32:19.2179927Z Prepare workflow directory
+2025-09-03T14:32:19.2548572Z Prepare all required actions
+2025-09-03T14:32:19.2585658Z Getting action download info
+2025-09-03T14:32:19.7895996Z Download action repository 'actions/checkout@v4' (SHA:08eba0b27e820071cde6df949e0beb9ba4906955)
+2025-09-03T14:32:19.8672639Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2025-09-03T14:32:19.9549272Z Download action repository 'cypress-io/github-action@v6' (SHA:b8ba51a856ba5f4c15cf39007636d4ab04f23e3c)
+2025-09-03T14:32:20.5252472Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2025-09-03T14:32:20.7418229Z Complete job name: cypress-run (firefox)
+2025-09-03T14:32:20.8075217Z ##[group]Run actions/checkout@v4
+2025-09-03T14:32:20.8076115Z with:
+2025-09-03T14:32:20.8076815Z   repository: RodrigoMD2025/project-orange-hrm-tests-lume
+2025-09-03T14:32:20.8077624Z   token: ***
+2025-09-03T14:32:20.8078011Z   ssh-strict: true
+2025-09-03T14:32:20.8078422Z   ssh-user: git
+2025-09-03T14:32:20.8078836Z   persist-credentials: true
+2025-09-03T14:32:20.8079302Z   clean: true
+2025-09-03T14:32:20.8079725Z   sparse-checkout-cone-mode: true
+2025-09-03T14:32:20.8080244Z   fetch-depth: 1
+2025-09-03T14:32:20.8080649Z   fetch-tags: false
+2025-09-03T14:32:20.8081064Z   show-progress: true
+2025-09-03T14:32:20.8081795Z   lfs: false
+2025-09-03T14:32:20.8082213Z   submodules: false
+2025-09-03T14:32:20.8082633Z   set-safe-directory: true
+2025-09-03T14:32:20.8083434Z env:
+2025-09-03T14:32:20.8083823Z   NODE_VERSION: 22
+2025-09-03T14:32:20.8084224Z ##[endgroup]
+2025-09-03T14:32:20.9168638Z Syncing repository: RodrigoMD2025/project-orange-hrm-tests-lume
+2025-09-03T14:32:20.9170842Z ##[group]Getting Git version info
+2025-09-03T14:32:20.9171855Z Working directory is '/home/runner/work/project-orange-hrm-tests-lume/project-orange-hrm-tests-lume'
+2025-09-03T14:32:20.9173134Z [command]/usr/bin/git version
+2025-09-03T14:32:20.9237883Z git version 2.51.0
+2025-09-03T14:32:20.9264492Z ##[endgroup]
+2025-09-03T14:32:20.9279643Z Temporarily overriding HOME='/home/runner/work/_temp/e41e7e2b-a546-4df7-8cd7-194ca328dead' before making global git config changes
+2025-09-03T14:32:20.9281083Z Adding repository directory to the temporary git global config as a safe directory
+2025-09-03T14:32:20.9293821Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/project-orange-hrm-tests-lume/project-orange-hrm-tests-lume
+2025-09-03T14:32:20.9331736Z Deleting the contents of '/home/runner/work/project-orange-hrm-tests-lume/project-orange-hrm-tests-lume'
+2025-09-03T14:32:20.9334881Z ##[group]Initializing the repository
+2025-09-03T14:32:20.9339474Z [command]/usr/bin/git init /home/runner/work/project-orange-hrm-tests-lume/project-orange-hrm-tests-lume
+2025-09-03T14:32:20.9407451Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-09-03T14:32:20.9409139Z hint: is subject to change. To configure the initial branch name to use in all
+2025-09-03T14:32:20.9410720Z hint: of your new repositories, which will suppress this warning, call:
+2025-09-03T14:32:20.9411931Z hint:
+2025-09-03T14:32:20.9412748Z hint: 	git config --global init.defaultBranch <name>
+2025-09-03T14:32:20.9413745Z hint:
+2025-09-03T14:32:20.9414500Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-09-03T14:32:20.9415524Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-09-03T14:32:20.9416791Z hint:
+2025-09-03T14:32:20.9417237Z hint: 	git branch -m <name>
+2025-09-03T14:32:20.9417686Z hint:
+2025-09-03T14:32:20.9418291Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2025-09-03T14:32:20.9419693Z Initialized empty Git repository in /home/runner/work/project-orange-hrm-tests-lume/project-orange-hrm-tests-lume/.git/
+2025-09-03T14:32:20.9423057Z [command]/usr/bin/git remote add origin https://github.com/RodrigoMD2025/project-orange-hrm-tests-lume
+2025-09-03T14:32:20.9464189Z ##[endgroup]
+2025-09-03T14:32:20.9465530Z ##[group]Disabling automatic garbage collection
+2025-09-03T14:32:20.9468718Z [command]/usr/bin/git config --local gc.auto 0
+2025-09-03T14:32:20.9497856Z ##[endgroup]
+2025-09-03T14:32:20.9499230Z ##[group]Setting up auth
+2025-09-03T14:32:20.9505520Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-09-03T14:32:20.9536373Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-09-03T14:32:20.9865983Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-09-03T14:32:20.9898860Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-09-03T14:32:21.0123363Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-09-03T14:32:21.0160616Z ##[endgroup]
+2025-09-03T14:32:21.0161358Z ##[group]Fetching the repository
+2025-09-03T14:32:21.0178279Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +79efea024f5b811bc095269ae43518b16b63f383:refs/remotes/origin/master
+2025-09-03T14:32:21.4109305Z From https://github.com/RodrigoMD2025/project-orange-hrm-tests-lume
+2025-09-03T14:32:21.4110475Z  * [new ref]         79efea024f5b811bc095269ae43518b16b63f383 -> origin/master
+2025-09-03T14:32:21.4139271Z ##[endgroup]
+2025-09-03T14:32:21.4140017Z ##[group]Determining the checkout info
+2025-09-03T14:32:21.4141258Z ##[endgroup]
+2025-09-03T14:32:21.4146216Z [command]/usr/bin/git sparse-checkout disable
+2025-09-03T14:32:21.4184356Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-09-03T14:32:21.4211363Z ##[group]Checking out the ref
+2025-09-03T14:32:21.4215291Z [command]/usr/bin/git checkout --progress --force -B master refs/remotes/origin/master
+2025-09-03T14:32:21.4276230Z Reset branch 'master'
+2025-09-03T14:32:21.4279237Z branch 'master' set up to track 'origin/master'.
+2025-09-03T14:32:21.4285178Z ##[endgroup]
+2025-09-03T14:32:21.4320171Z [command]/usr/bin/git log -1 --format=%H
+2025-09-03T14:32:21.4341909Z 79efea024f5b811bc095269ae43518b16b63f383
+2025-09-03T14:32:21.4576714Z ##[group]Run actions/setup-node@v4
+2025-09-03T14:32:21.4577372Z with:
+2025-09-03T14:32:21.4577760Z   node-version: 22
+2025-09-03T14:32:21.4578153Z   cache: npm
+2025-09-03T14:32:21.4578534Z   always-auth: false
+2025-09-03T14:32:21.4578946Z   check-latest: false
+2025-09-03T14:32:21.4579524Z   token: ***
+2025-09-03T14:32:21.4580115Z env:
+2025-09-03T14:32:21.4580474Z   NODE_VERSION: 22
+2025-09-03T14:32:21.4580877Z ##[endgroup]
+2025-09-03T14:32:21.6589530Z Found in cache @ /opt/hostedtoolcache/node/22.19.0/x64
+2025-09-03T14:32:21.6596859Z ##[group]Environment details
+2025-09-03T14:32:23.2372834Z node: v22.19.0
+2025-09-03T14:32:23.2373415Z npm: 10.9.3
+2025-09-03T14:32:23.2373831Z yarn: 1.22.22
+2025-09-03T14:32:23.2374995Z ##[endgroup]
+2025-09-03T14:32:23.2395174Z [command]/opt/hostedtoolcache/node/22.19.0/x64/bin/npm config get cache
+2025-09-03T14:32:23.4527600Z /home/runner/.npm
+2025-09-03T14:32:23.8646137Z Cache hit for: node-cache-Linux-x64-npm-ffba805d73e12b64e490d6c8ae65162c516d6cdd4af6672d36855584cad6350a
+2025-09-03T14:32:25.1827426Z Received 5305937 of 9500241 (55.9%), 5.1 MBs/sec
+2025-09-03T14:32:25.5896054Z Received 9500241 of 9500241 (100.0%), 6.4 MBs/sec
+2025-09-03T14:32:25.5897002Z Cache Size: ~9 MB (9500241 B)
+2025-09-03T14:32:25.5926934Z [command]/usr/bin/tar -xf /home/runner/work/_temp/f54ce3e1-1422-467e-b87c-f513f94ee54b/cache.tzst -P -C /home/runner/work/project-orange-hrm-tests-lume/project-orange-hrm-tests-lume --use-compress-program unzstd
+2025-09-03T14:32:25.6580872Z Cache restored successfully
+2025-09-03T14:32:25.6605081Z Cache restored from key: node-cache-Linux-x64-npm-ffba805d73e12b64e490d6c8ae65162c516d6cdd4af6672d36855584cad6350a
+2025-09-03T14:32:25.6753543Z ##[group]Run npm ci
+2025-09-03T14:32:25.6753858Z [36;1mnpm ci[0m
+2025-09-03T14:32:25.6822333Z shell: /usr/bin/bash -e {0}
+2025-09-03T14:32:25.6822636Z env:
+2025-09-03T14:32:25.6822842Z   NODE_VERSION: 22
+2025-09-03T14:32:25.6823057Z ##[endgroup]
+2025-09-03T14:32:45.0410081Z 
+2025-09-03T14:32:45.0417244Z added 272 packages, and audited 273 packages in 19s
+2025-09-03T14:32:45.0417672Z 
+2025-09-03T14:32:45.0417898Z 67 packages are looking for funding
+2025-09-03T14:32:45.0418278Z   run `npm fund` for details
+2025-09-03T14:32:45.0420336Z 
+2025-09-03T14:32:45.0420595Z found 0 vulnerabilities
+2025-09-03T14:32:45.0984816Z ##[warning]Unexpected input(s) 'headless', valid inputs are ['auto-cancel-after-failures', 'browser', 'ci-build-id', 'component', 'config', 'config-file', 'env', 'group', 'headed', 'parallel', 'project', 'quiet', 'record', 'spec', 'tag', 'build', 'cache-key', 'command', 'command-prefix', 'install', 'install-command', 'publish-summary', 'runTests', 'start', 'start-windows', 'summary-title', 'wait-on', 'wait-on-timeout', 'working-directory']
+2025-09-03T14:32:45.0997676Z ##[group]Run cypress-io/github-action@v6
+2025-09-03T14:32:45.0997936Z with:
+2025-09-03T14:32:45.0998141Z   browser: firefox
+2025-09-03T14:32:45.0998337Z   headless: true
+2025-09-03T14:32:45.0998509Z   record: true
+2025-09-03T14:32:45.0998691Z   parallel: true
+2025-09-03T14:32:45.0998917Z   group: GitHub Actions - firefox
+2025-09-03T14:32:45.0999155Z   tag: github-actions
+2025-09-03T14:32:45.0999364Z   component: false
+2025-09-03T14:32:45.0999567Z   publish-summary: true
+2025-09-03T14:32:45.0999765Z env:
+2025-09-03T14:32:45.0999965Z   NODE_VERSION: 22
+2025-09-03T14:32:45.1000159Z   CYPRESS_RECORD_KEY: 
+2025-09-03T14:32:45.1000675Z   GITHUB_TOKEN: ***
+2025-09-03T14:32:45.1000883Z   COMMIT_INFO_BRANCH: master
+2025-09-03T14:32:45.1001162Z   COMMIT_INFO_SHA: 79efea024f5b811bc095269ae43518b16b63f383
+2025-09-03T14:32:45.1001458Z   COMMIT_INFO_TIMESTAMP: 
+2025-09-03T14:32:45.1001666Z ##[endgroup]
+2025-09-03T14:32:45.5518463Z Cache hit for: cypress-linux-x64-8176632ae58963a027b079d741f7b026e11812ac789639071f488dd2196643e075358e7dea60a7d01d9b5dd66be0a9450894ce86ccde5c54d5b1c0330ac1ca60
+2025-09-03T14:32:45.5727750Z Cache hit for: npm-linux-x64-8176632ae58963a027b079d741f7b026e11812ac789639071f488dd2196643e075358e7dea60a7d01d9b5dd66be0a9450894ce86ccde5c54d5b1c0330ac1ca60
+2025-09-03T14:32:46.8776403Z Received 0 of 176376286 (0.0%), 0.0 MBs/sec
+2025-09-03T14:32:46.8975513Z Received 1085260 of 9473868 (11.5%), 1.0 MBs/sec
+2025-09-03T14:32:47.1377525Z Received 9473868 of 9473868 (100.0%), 7.3 MBs/sec
+2025-09-03T14:32:47.1379278Z Cache Size: ~9 MB (9473868 B)
+2025-09-03T14:32:47.1409258Z [command]/usr/bin/tar -xf /home/runner/work/_temp/de86eb7f-495d-49cf-882b-e04234e4a9d7/cache.tzst -P -C /home/runner/work/project-orange-hrm-tests-lume/project-orange-hrm-tests-lume --use-compress-program unzstd
+2025-09-03T14:32:47.2170483Z Cache restored successfully
+2025-09-03T14:32:47.8798154Z Received 109051904 of 176376286 (61.8%), 52.0 MBs/sec
+2025-09-03T14:32:48.6706078Z Received 176376286 of 176376286 (100.0%), 60.2 MBs/sec
+2025-09-03T14:32:48.6708853Z Cache Size: ~168 MB (176376286 B)
+2025-09-03T14:32:48.6769723Z [command]/usr/bin/tar -xf /home/runner/work/_temp/44d39b23-e48f-48bb-a73a-f2d8ece02a05/cache.tzst -P -C /home/runner/work/project-orange-hrm-tests-lume/project-orange-hrm-tests-lume --use-compress-program unzstd
+2025-09-03T14:32:50.9508160Z Cache restored successfully
+2025-09-03T14:32:50.9875493Z [command]/opt/hostedtoolcache/node/22.19.0/x64/bin/npm ci
+2025-09-03T14:32:53.4695785Z 
+2025-09-03T14:32:53.4696752Z added 272 packages, and audited 273 packages in 2s
+2025-09-03T14:32:53.4699140Z 
+2025-09-03T14:32:53.4699446Z 67 packages are looking for funding
+2025-09-03T14:32:53.4699892Z   run `npm fund` for details
+2025-09-03T14:32:53.4705230Z 
+2025-09-03T14:32:53.4705446Z found 0 vulnerabilities
+2025-09-03T14:32:53.4922556Z [command]/opt/hostedtoolcache/node/22.19.0/x64/bin/npx cypress cache list
+2025-09-03T14:32:53.8732299Z ┌─────────┬───────────────────┐
+2025-09-03T14:32:53.8732984Z │ version │ last used         │
+2025-09-03T14:32:53.8733506Z ├─────────┼───────────────────┤
+2025-09-03T14:32:53.8734000Z │ 13.17.0 │ a few seconds ago │
+2025-09-03T14:32:53.8734534Z └─────────┴───────────────────┘
+2025-09-03T14:32:57.9987141Z 
+2025-09-03T14:32:57.9999529Z DevTools listening on ws://127.0.0.1:45453/devtools/browser/6fa1711a-adec-4291-b89f-8b88ff75ad9f
+2025-09-03T14:33:02.8320801Z [31mYou passed the [95m--record[31m flag but this project has not been setup to record.[39m
+2025-09-03T14:33:02.8321543Z [31m[39m
+2025-09-03T14:33:02.8323007Z [31mThis project is missing the [33mprojectId[31m inside of: [94mcypress.config.js[31m[39m
+2025-09-03T14:33:02.8323990Z [31m[39m
+2025-09-03T14:33:02.8324887Z [31mWe cannot uniquely identify this project without this id.[39m
+2025-09-03T14:33:02.8325730Z [31m[39m
+2025-09-03T14:33:02.8327052Z [31mYou need to setup this project to record. This will generate a unique projectId.[39m
+2025-09-03T14:33:02.8327734Z [31m[39m
+2025-09-03T14:33:02.8328639Z [31mAlternatively if you omit the [95m--record[31m flag this project will run without recording.[39m
+2025-09-03T14:33:02.8329358Z [31m[39m
+2025-09-03T14:33:02.8329902Z [31mhttps://on.cypress.io/recording-project-runs[39m
+2025-09-03T14:33:02.9518033Z Test run failed, code 1
+2025-09-03T14:33:02.9518624Z More information might be available above
+2025-09-03T14:33:02.9519345Z Cypress module has returned the following error message:
+2025-09-03T14:33:02.9520023Z Could not find Cypress test run results
+2025-09-03T14:33:02.9537999Z ##[error]Could not find Cypress test run results
+2025-09-03T14:33:02.9697902Z ##[group]Run actions/upload-artifact@v4
+2025-09-03T14:33:02.9698191Z with:
+2025-09-03T14:33:02.9698378Z   name: cypress-reports-firefox
+2025-09-03T14:33:02.9698608Z   path: cypress/reports/
+2025-09-03T14:33:02.9698816Z   retention-days: 30
+2025-09-03T14:33:02.9699012Z   if-no-files-found: warn
+2025-09-03T14:33:02.9699214Z   compression-level: 6
+2025-09-03T14:33:02.9699406Z   overwrite: false
+2025-09-03T14:33:02.9699598Z   include-hidden-files: false
+2025-09-03T14:33:02.9699801Z env:
+2025-09-03T14:33:02.9699960Z   NODE_VERSION: 22
+2025-09-03T14:33:02.9700133Z   CI: 1
+2025-09-03T14:33:02.9700332Z   CYPRESS_CACHE_FOLDER: /home/runner/.cache/Cypress
+2025-09-03T14:33:02.9700620Z   npm_config_cache: /home/runner/.npm
+2025-09-03T14:33:02.9700851Z   TERM: xterm
+2025-09-03T14:33:02.9701023Z   GH_BRANCH: master
+2025-09-03T14:33:02.9701198Z ##[endgroup]
+2025-09-03T14:33:03.1816731Z ##[warning]No files were found with the provided path: cypress/reports/. No artifacts will be uploaded.
+2025-09-03T14:33:03.1951304Z ##[group]Run actions/upload-artifact@v4
+2025-09-03T14:33:03.1951747Z with:
+2025-09-03T14:33:03.1951934Z   name: cypress-videos-firefox
+2025-09-03T14:33:03.1952160Z   path: cypress/videos/
+2025-09-03T14:33:03.1952361Z   retention-days: 7
+2025-09-03T14:33:03.1952554Z   if-no-files-found: warn
+2025-09-03T14:33:03.1952758Z   compression-level: 6
+2025-09-03T14:33:03.1952952Z   overwrite: false
+2025-09-03T14:33:03.1953143Z   include-hidden-files: false
+2025-09-03T14:33:03.1953345Z env:
+2025-09-03T14:33:03.1953507Z   NODE_VERSION: 22
+2025-09-03T14:33:03.1953680Z   CI: 1
+2025-09-03T14:33:03.1953880Z   CYPRESS_CACHE_FOLDER: /home/runner/.cache/Cypress
+2025-09-03T14:33:03.1954174Z   npm_config_cache: /home/runner/.npm
+2025-09-03T14:33:03.1954411Z   TERM: xterm
+2025-09-03T14:33:03.1954578Z   GH_BRANCH: master
+2025-09-03T14:33:03.1954762Z ##[endgroup]
+2025-09-03T14:33:03.4059262Z ##[warning]No files were found with the provided path: cypress/videos/. No artifacts will be uploaded.
+2025-09-03T14:33:03.4195255Z ##[group]Run actions/upload-artifact@v4
+2025-09-03T14:33:03.4195551Z with:
+2025-09-03T14:33:03.4195744Z   name: cypress-screenshots-firefox
+2025-09-03T14:33:03.4195997Z   path: cypress/screenshots/
+2025-09-03T14:33:03.4196223Z   retention-days: 14
+2025-09-03T14:33:03.4196428Z   if-no-files-found: warn
+2025-09-03T14:33:03.4196980Z   compression-level: 6
+2025-09-03T14:33:03.4197177Z   overwrite: false
+2025-09-03T14:33:03.4197373Z   include-hidden-files: false
+2025-09-03T14:33:03.4197575Z env:
+2025-09-03T14:33:03.4197736Z   NODE_VERSION: 22
+2025-09-03T14:33:03.4197912Z   CI: 1
+2025-09-03T14:33:03.4198107Z   CYPRESS_CACHE_FOLDER: /home/runner/.cache/Cypress
+2025-09-03T14:33:03.4198398Z   npm_config_cache: /home/runner/.npm
+2025-09-03T14:33:03.4198634Z   TERM: xterm
+2025-09-03T14:33:03.4198805Z   GH_BRANCH: master
+2025-09-03T14:33:03.4198976Z ##[endgroup]
+2025-09-03T14:33:03.6316664Z ##[warning]No files were found with the provided path: cypress/screenshots/. No artifacts will be uploaded.
+2025-09-03T14:33:03.6422771Z ##[group]Run echo "## 🧪 Cypress Test Results - firefox" >> $GITHUB_STEP_SUMMARY
+2025-09-03T14:33:03.6423308Z [36;1mecho "## 🧪 Cypress Test Results - firefox" >> $GITHUB_STEP_SUMMARY[0m
+2025-09-03T14:33:03.6423708Z [36;1mecho "| Metric | Value |" >> $GITHUB_STEP_SUMMARY[0m
+2025-09-03T14:33:03.6424047Z [36;1mecho "|--------|-------|" >> $GITHUB_STEP_SUMMARY[0m
+2025-09-03T14:33:03.6424383Z [36;1mecho "| Browser | firefox |" >> $GITHUB_STEP_SUMMARY[0m
+2025-09-03T14:33:03.6424727Z [36;1mecho "| Node Version | 22 |" >> $GITHUB_STEP_SUMMARY[0m
+2025-09-03T14:33:03.6425084Z [36;1mecho "| Status | failure |" >> $GITHUB_STEP_SUMMARY[0m
+2025-09-03T14:33:03.6425532Z [36;1mecho "| Commit | 79efea024f5b811bc095269ae43518b16b63f383 |" >> $GITHUB_STEP_SUMMARY[0m
+2025-09-03T14:33:03.6456156Z shell: /usr/bin/bash -e {0}
+2025-09-03T14:33:03.6456384Z env:
+2025-09-03T14:33:03.6456719Z   NODE_VERSION: 22
+2025-09-03T14:33:03.6456905Z   CI: 1
+2025-09-03T14:33:03.6457144Z   CYPRESS_CACHE_FOLDER: /home/runner/.cache/Cypress
+2025-09-03T14:33:03.6457451Z   npm_config_cache: /home/runner/.npm
+2025-09-03T14:33:03.6457697Z   TERM: xterm
+2025-09-03T14:33:03.6457869Z   GH_BRANCH: master
+2025-09-03T14:33:03.6458042Z ##[endgroup]
+2025-09-03T14:33:03.6587633Z Post job cleanup.
+2025-09-03T14:33:03.7520086Z [command]/usr/bin/git version
+2025-09-03T14:33:03.7556212Z git version 2.51.0
+2025-09-03T14:33:03.7600857Z Temporarily overriding HOME='/home/runner/work/_temp/2d5c9f30-f88c-4fc8-8ecc-3ccec3040f6a' before making global git config changes
+2025-09-03T14:33:03.7602338Z Adding repository directory to the temporary git global config as a safe directory
+2025-09-03T14:33:03.7607933Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/project-orange-hrm-tests-lume/project-orange-hrm-tests-lume
+2025-09-03T14:33:03.7643816Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-09-03T14:33:03.7676848Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-09-03T14:33:03.7899387Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-09-03T14:33:03.7920763Z http.https://github.com/.extraheader
+2025-09-03T14:33:03.7932926Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-09-03T14:33:03.7964616Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-09-03T14:33:03.8284575Z Cleaning up orphan processes

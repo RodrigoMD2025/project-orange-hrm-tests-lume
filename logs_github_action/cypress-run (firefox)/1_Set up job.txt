@@ -1,0 +1,32 @@
+﻿2025-09-03T14:32:19.2137618Z Current runner version: '2.328.0'
+2025-09-03T14:32:19.2161020Z ##[group]Runner Image Provisioner
+2025-09-03T14:32:19.2161915Z Hosted Compute Agent
+2025-09-03T14:32:19.2162483Z Version: 20250829.383
+2025-09-03T14:32:19.2163040Z Commit: 27cb235aab5b0e52e153a26cd86b4742e89dac5d
+2025-09-03T14:32:19.2163763Z Build Date: 2025-08-29T13:48:48Z
+2025-09-03T14:32:19.2164324Z ##[endgroup]
+2025-09-03T14:32:19.2164874Z ##[group]Operating System
+2025-09-03T14:32:19.2165383Z Ubuntu
+2025-09-03T14:32:19.2165922Z 24.04.3
+2025-09-03T14:32:19.2166378Z LTS
+2025-09-03T14:32:19.2166931Z ##[endgroup]
+2025-09-03T14:32:19.2167475Z ##[group]Runner Image
+2025-09-03T14:32:19.2168009Z Image: ubuntu-24.04
+2025-09-03T14:32:19.2168491Z Version: 20250831.1.0
+2025-09-03T14:32:19.2169517Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250831.1/images/ubuntu/Ubuntu2404-Readme.md
+2025-09-03T14:32:19.2170854Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250831.1
+2025-09-03T14:32:19.2172366Z ##[endgroup]
+2025-09-03T14:32:19.2173388Z ##[group]GITHUB_TOKEN Permissions
+2025-09-03T14:32:19.2175199Z Contents: read
+2025-09-03T14:32:19.2175713Z Metadata: read
+2025-09-03T14:32:19.2176205Z Packages: read
+2025-09-03T14:32:19.2176891Z ##[endgroup]
+2025-09-03T14:32:19.2179222Z Secret source: Actions
+2025-09-03T14:32:19.2179923Z Prepare workflow directory
+2025-09-03T14:32:19.2548546Z Prepare all required actions
+2025-09-03T14:32:19.2585634Z Getting action download info
+2025-09-03T14:32:19.7895957Z Download action repository 'actions/checkout@v4' (SHA:08eba0b27e820071cde6df949e0beb9ba4906955)
+2025-09-03T14:32:19.8672615Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2025-09-03T14:32:19.9549239Z Download action repository 'cypress-io/github-action@v6' (SHA:b8ba51a856ba5f4c15cf39007636d4ab04f23e3c)
+2025-09-03T14:32:20.5252406Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2025-09-03T14:32:20.7418192Z Complete job name: cypress-run (firefox)

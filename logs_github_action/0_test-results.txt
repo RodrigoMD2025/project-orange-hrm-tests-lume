@@ -1,0 +1,54 @@
+﻿2025-09-03T14:33:11.7990197Z Current runner version: '2.328.0'
+2025-09-03T14:33:11.8020055Z ##[group]Runner Image Provisioner
+2025-09-03T14:33:11.8021508Z Hosted Compute Agent
+2025-09-03T14:33:11.8022315Z Version: 20250829.383
+2025-09-03T14:33:11.8023402Z Commit: 27cb235aab5b0e52e153a26cd86b4742e89dac5d
+2025-09-03T14:33:11.8024600Z Build Date: 2025-08-29T13:48:48Z
+2025-09-03T14:33:11.8025550Z ##[endgroup]
+2025-09-03T14:33:11.8026409Z ##[group]Operating System
+2025-09-03T14:33:11.8027389Z Ubuntu
+2025-09-03T14:33:11.8028075Z 24.04.3
+2025-09-03T14:33:11.8028804Z LTS
+2025-09-03T14:33:11.8029632Z ##[endgroup]
+2025-09-03T14:33:11.8030395Z ##[group]Runner Image
+2025-09-03T14:33:11.8031332Z Image: ubuntu-24.04
+2025-09-03T14:33:11.8032180Z Version: 20250831.1.0
+2025-09-03T14:33:11.8034018Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250831.1/images/ubuntu/Ubuntu2404-Readme.md
+2025-09-03T14:33:11.8036547Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250831.1
+2025-09-03T14:33:11.8038288Z ##[endgroup]
+2025-09-03T14:33:11.8039935Z ##[group]GITHUB_TOKEN Permissions
+2025-09-03T14:33:11.8042445Z Contents: read
+2025-09-03T14:33:11.8043679Z Metadata: read
+2025-09-03T14:33:11.8044452Z Packages: read
+2025-09-03T14:33:11.8045314Z ##[endgroup]
+2025-09-03T14:33:11.8047881Z Secret source: Actions
+2025-09-03T14:33:11.8048896Z Prepare workflow directory
+2025-09-03T14:33:11.8542183Z Prepare all required actions
+2025-09-03T14:33:11.8609454Z Complete job name: test-results
+2025-09-03T14:33:11.9443868Z ##[group]Run echo "## 📈 Resumo Geral dos Testes" >> $GITHUB_STEP_SUMMARY
+2025-09-03T14:33:11.9445050Z [36;1mecho "## 📈 Resumo Geral dos Testes" >> $GITHUB_STEP_SUMMARY[0m
+2025-09-03T14:33:11.9445771Z [36;1mecho "" >> $GITHUB_STEP_SUMMARY[0m
+2025-09-03T14:33:11.9446484Z [36;1mecho "### 🔍 Detalhes da Execução:" >> $GITHUB_STEP_SUMMARY[0m
+2025-09-03T14:33:11.9447367Z [36;1mecho "- **Data**: $(date +'%d/%m/%Y %H:%M:%S')" >> $GITHUB_STEP_SUMMARY[0m
+2025-09-03T14:33:11.9448206Z [36;1mecho "- **Branch**: master" >> $GITHUB_STEP_SUMMARY[0m
+2025-09-03T14:33:11.9449283Z [36;1mecho "- **Commit**: 79efea024f5b811bc095269ae43518b16b63f383" >> $GITHUB_STEP_SUMMARY[0m
+2025-09-03T14:33:11.9450294Z [36;1mecho "- **Autor**: RodrigoMD2025" >> $GITHUB_STEP_SUMMARY[0m
+2025-09-03T14:33:11.9451116Z [36;1mecho "- **Browsers**: Chrome, Firefox" >> $GITHUB_STEP_SUMMARY[0m
+2025-09-03T14:33:11.9452131Z [36;1mecho "- **Total de Specs**: 3 (admin, timesheet, user)" >> $GITHUB_STEP_SUMMARY[0m
+2025-09-03T14:33:11.9453136Z [36;1mecho "- **Total de Testes**: 20" >> $GITHUB_STEP_SUMMARY[0m
+2025-09-03T14:33:11.9453876Z [36;1mecho "" >> $GITHUB_STEP_SUMMARY[0m
+2025-09-03T14:33:11.9454488Z [36;1m[0m
+2025-09-03T14:33:11.9455022Z [36;1mif [[ "failure" == "success" ]]; then[0m
+2025-09-03T14:33:11.9455755Z [36;1m  echo "### ✅ Status: TODOS OS TESTES PASSARAM!" >> $GITHUB_STEP_SUMMARY[0m
+2025-09-03T14:33:11.9456554Z [36;1m  echo "" >> $GITHUB_STEP_SUMMARY[0m
+2025-09-03T14:33:11.9457561Z [36;1m  echo "🎉 Parabéns! Todos os 20 testes foram executados com sucesso em ambos os browsers." >> $GITHUB_STEP_SUMMARY[0m
+2025-09-03T14:33:11.9458526Z [36;1melse[0m
+2025-09-03T14:33:11.9459154Z [36;1m  echo "### ❌ Status: FALHAS DETECTADAS" >> $GITHUB_STEP_SUMMARY[0m
+2025-09-03T14:33:11.9459839Z [36;1m  echo "" >> $GITHUB_STEP_SUMMARY[0m
+2025-09-03T14:33:11.9460779Z [36;1m  echo "🚫 Alguns testes falharam. Verifique os logs e screenshots para detalhes." >> $GITHUB_STEP_SUMMARY[0m
+2025-09-03T14:33:11.9461699Z [36;1mfi[0m
+2025-09-03T14:33:11.9657863Z shell: /usr/bin/bash -e {0}
+2025-09-03T14:33:11.9658866Z env:
+2025-09-03T14:33:11.9659306Z   NODE_VERSION: 22
+2025-09-03T14:33:11.9659791Z ##[endgroup]
+2025-09-03T14:33:11.9982065Z Cleaning up orphan processes
