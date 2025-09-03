@@ -1,55 +1,124 @@
-name: Cypress Tests
+name: 🧪 Cypress E2E Tests - OrangeHRM
 
 on:
   push:
     branches:
       - master
+      - main
+      - develop
   pull_request:
     branches:
       - master
+      - main
+  workflow_dispatch:  # Permite execução manual
+  schedule:
+    - cron: '0 2 * * 1-5'  # Execução diária às 2h (segunda a sexta)
+
+env:
+  NODE_VERSION: '22'  # Alinhado com a versão local do projeto
 
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
+    timeout-minutes: 15  # Timeout para evitar execuções infinitas
+    
+    strategy:
+      fail-fast: false  # Continua outros jobs mesmo se um falhar
+      matrix:
+        browser: [chrome, firefox]  # Testa em múltiplos browsers
+    
     steps:
-      - name: Checkout
+      - name: 📥 Checkout Repository
         uses: actions/checkout@v4
         
-      - name: Set up Node.js
+      - name: ⚙️ Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'  # Cache das dependências para execução mais rápida
           
-      - name: Install dependencies
-        run: npm install
+      - name: 📦 Install Dependencies
+        run: npm ci  # Instalação mais rápida e determinística
         
-      - name: Run Cypress tests
+      - name: 🧪 Run Cypress Tests (${{ matrix.browser }})
         uses: cypress-io/github-action@v6
         with:
-          browser: chrome
+          browser: ${{ matrix.browser }}
           headless: true
           record: true
+          parallel: true
+          group: 'GitHub Actions - ${{ matrix.browser }}'
+          tag: 'github-actions'
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Variáveis para identificação no Cypress Cloud
+          COMMIT_INFO_BRANCH: ${{ github.head_ref || github.ref_name }}
+          COMMIT_INFO_SHA: ${{ github.sha }}
+          COMMIT_INFO_TIMESTAMP: ${{ github.event.head_commit.timestamp }}
+        continue-on-error: false
           
-      - name: Upload Reports
+      - name: 📊 Upload Test Reports
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: cypress-reports
-          path: cypress/reports
+          name: cypress-reports-${{ matrix.browser }}
+          path: cypress/reports/
+          retention-days: 30
           
-      - name: Upload Videos
+      - name: 🎥 Upload Test Videos
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: cypress-videos
-          path: cypress/videos
+          name: cypress-videos-${{ matrix.browser }}
+          path: cypress/videos/
+          retention-days: 7
           
-      - name: Upload Screenshots
+      - name: 📸 Upload Screenshots (on failure)
         if: failure()
         uses: actions/upload-artifact@v4
         with:
-          name: cypress-screenshots
-          path: cypress/screenshots
+          name: cypress-screenshots-${{ matrix.browser }}
+          path: cypress/screenshots/
+          retention-days: 14
+          
+      - name: 📋 Test Results Summary
+        if: always()
+        run: |
+          echo "## 🧪 Cypress Test Results - ${{ matrix.browser }}" >> $GITHUB_STEP_SUMMARY
+          echo "| Metric | Value |" >> $GITHUB_STEP_SUMMARY
+          echo "|--------|-------|" >> $GITHUB_STEP_SUMMARY
+          echo "| Browser | ${{ matrix.browser }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| Node Version | ${{ env.NODE_VERSION }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| Status | ${{ job.status }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| Commit | ${{ github.sha }} |" >> $GITHUB_STEP_SUMMARY
+
+  # Job para consolidar resultados e notificar
+  test-results:
+    if: always()
+    needs: cypress-run
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📋 Consolidate Test Results
+        run: |
+          echo "## 📈 Resumo Geral dos Testes" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### 🔍 Detalhes da Execução:" >> $GITHUB_STEP_SUMMARY
+          echo "- **Data**: $(date +'%d/%m/%Y %H:%M:%S')" >> $GITHUB_STEP_SUMMARY
+          echo "- **Branch**: ${{ github.head_ref || github.ref_name }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Commit**: ${{ github.sha }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Autor**: ${{ github.actor }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Browsers**: Chrome, Firefox" >> $GITHUB_STEP_SUMMARY
+          echo "- **Total de Specs**: 3 (admin, timesheet, user)" >> $GITHUB_STEP_SUMMARY
+          echo "- **Total de Testes**: 20" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          if [[ "${{ needs.cypress-run.result }}" == "success" ]]; then
+            echo "### ✅ Status: TODOS OS TESTES PASSARAM!" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "🎉 Parabéns! Todos os 20 testes foram executados com sucesso em ambos os browsers." >> $GITHUB_STEP_SUMMARY
+          else
+            echo "### ❌ Status: FALHAS DETECTADAS" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "🚫 Alguns testes falharam. Verifique os logs e screenshots para detalhes." >> $GITHUB_STEP_SUMMARY
+          fi
