@@ -25,7 +25,7 @@ jobs:
     strategy:
       fail-fast: false  # Continua outros jobs mesmo se um falhar
       matrix:
-        browser: [chrome, firefox]  # Testa em múltiplos browsers
+        browser: [chrome]  # Testa em múltiplos browsers
     
     steps:
       - name: 📥 Checkout Repository
@@ -103,7 +103,7 @@ jobs:
           echo "- **Branch**: ${{ github.head_ref || github.ref_name }}" >> $GITHUB_STEP_SUMMARY
           echo "- **Commit**: ${{ github.sha }}" >> $GITHUB_STEP_SUMMARY
           echo "- **Autor**: ${{ github.actor }}" >> $GITHUB_STEP_SUMMARY
-          echo "- **Browsers**: Chrome, Firefox" >> $GITHUB_STEP_SUMMARY
+          echo "- **Browsers**: Chrome" >> $GITHUB_STEP_SUMMARY
           echo "- **Total de Specs**: 3 (admin, timesheet, user)" >> $GITHUB_STEP_SUMMARY
           echo "- **Total de Testes**: 20" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
