@@ -1,0 +1,71 @@
+﻿2025-09-03T14:40:42.8494646Z ##[group]Run actions/checkout@v4
+2025-09-03T14:40:42.8495581Z with:
+2025-09-03T14:40:42.8496128Z   repository: RodrigoMD2025/project-orange-hrm-tests-lume
+2025-09-03T14:40:42.8496991Z   token: ***
+2025-09-03T14:40:42.8497396Z   ssh-strict: true
+2025-09-03T14:40:42.8497822Z   ssh-user: git
+2025-09-03T14:40:42.8498241Z   persist-credentials: true
+2025-09-03T14:40:42.8498714Z   clean: true
+2025-09-03T14:40:42.8499139Z   sparse-checkout-cone-mode: true
+2025-09-03T14:40:42.8500273Z   fetch-depth: 1
+2025-09-03T14:40:42.8500722Z   fetch-tags: false
+2025-09-03T14:40:42.8501147Z   show-progress: true
+2025-09-03T14:40:42.8501582Z   lfs: false
+2025-09-03T14:40:42.8501988Z   submodules: false
+2025-09-03T14:40:42.8502408Z   set-safe-directory: true
+2025-09-03T14:40:42.8503198Z env:
+2025-09-03T14:40:42.8503596Z   NODE_VERSION: 22
+2025-09-03T14:40:42.8504000Z ##[endgroup]
+2025-09-03T14:40:42.9590525Z Syncing repository: RodrigoMD2025/project-orange-hrm-tests-lume
+2025-09-03T14:40:42.9592654Z ##[group]Getting Git version info
+2025-09-03T14:40:42.9593952Z Working directory is '/home/runner/work/project-orange-hrm-tests-lume/project-orange-hrm-tests-lume'
+2025-09-03T14:40:42.9595499Z [command]/usr/bin/git version
+2025-09-03T14:40:42.9618634Z git version 2.51.0
+2025-09-03T14:40:42.9645272Z ##[endgroup]
+2025-09-03T14:40:42.9666468Z Temporarily overriding HOME='/home/runner/work/_temp/af6c3264-a9f7-4605-96af-2275bf17035f' before making global git config changes
+2025-09-03T14:40:42.9668001Z Adding repository directory to the temporary git global config as a safe directory
+2025-09-03T14:40:42.9672497Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/project-orange-hrm-tests-lume/project-orange-hrm-tests-lume
+2025-09-03T14:40:42.9706350Z Deleting the contents of '/home/runner/work/project-orange-hrm-tests-lume/project-orange-hrm-tests-lume'
+2025-09-03T14:40:42.9709597Z ##[group]Initializing the repository
+2025-09-03T14:40:42.9713810Z [command]/usr/bin/git init /home/runner/work/project-orange-hrm-tests-lume/project-orange-hrm-tests-lume
+2025-09-03T14:40:42.9775453Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-09-03T14:40:42.9777526Z hint: is subject to change. To configure the initial branch name to use in all
+2025-09-03T14:40:42.9779575Z hint: of your new repositories, which will suppress this warning, call:
+2025-09-03T14:40:42.9780545Z hint:
+2025-09-03T14:40:42.9781118Z hint: 	git config --global init.defaultBranch <name>
+2025-09-03T14:40:42.9781794Z hint:
+2025-09-03T14:40:42.9782443Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-09-03T14:40:42.9783585Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-09-03T14:40:42.9784912Z hint:
+2025-09-03T14:40:42.9785390Z hint: 	git branch -m <name>
+2025-09-03T14:40:42.9785866Z hint:
+2025-09-03T14:40:42.9786488Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2025-09-03T14:40:42.9787867Z Initialized empty Git repository in /home/runner/work/project-orange-hrm-tests-lume/project-orange-hrm-tests-lume/.git/
+2025-09-03T14:40:42.9791408Z [command]/usr/bin/git remote add origin https://github.com/RodrigoMD2025/project-orange-hrm-tests-lume
+2025-09-03T14:40:42.9822883Z ##[endgroup]
+2025-09-03T14:40:42.9824114Z ##[group]Disabling automatic garbage collection
+2025-09-03T14:40:42.9826446Z [command]/usr/bin/git config --local gc.auto 0
+2025-09-03T14:40:42.9854976Z ##[endgroup]
+2025-09-03T14:40:42.9855706Z ##[group]Setting up auth
+2025-09-03T14:40:42.9861732Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-09-03T14:40:42.9891200Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-09-03T14:40:43.0166775Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-09-03T14:40:43.0199976Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-09-03T14:40:43.0423578Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-09-03T14:40:43.0462840Z ##[endgroup]
+2025-09-03T14:40:43.0464348Z ##[group]Fetching the repository
+2025-09-03T14:40:43.0473893Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +d1b673372f2fb2d95f8d97ac3be931a8c8fbf69a:refs/remotes/origin/master
+2025-09-03T14:40:43.4620170Z From https://github.com/RodrigoMD2025/project-orange-hrm-tests-lume
+2025-09-03T14:40:43.4621540Z  * [new ref]         d1b673372f2fb2d95f8d97ac3be931a8c8fbf69a -> origin/master
+2025-09-03T14:40:43.4650539Z ##[endgroup]
+2025-09-03T14:40:43.4651368Z ##[group]Determining the checkout info
+2025-09-03T14:40:43.4652710Z ##[endgroup]
+2025-09-03T14:40:43.4658135Z [command]/usr/bin/git sparse-checkout disable
+2025-09-03T14:40:43.4698485Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-09-03T14:40:43.4728355Z ##[group]Checking out the ref
+2025-09-03T14:40:43.4732230Z [command]/usr/bin/git checkout --progress --force -B master refs/remotes/origin/master
+2025-09-03T14:40:43.4822878Z Reset branch 'master'
+2025-09-03T14:40:43.4824931Z branch 'master' set up to track 'origin/master'.
+2025-09-03T14:40:43.4864392Z ##[endgroup]
+2025-09-03T14:40:43.4867967Z [command]/usr/bin/git log -1 --format=%H
+2025-09-03T14:40:43.4890637Z d1b673372f2fb2d95f8d97ac3be931a8c8fbf69a

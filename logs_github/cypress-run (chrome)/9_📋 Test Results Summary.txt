@@ -1,0 +1,14 @@
+﻿2025-09-03T14:49:04.8877797Z ##[group]Run echo "## 🧪 Cypress Test Results - chrome" >> $GITHUB_STEP_SUMMARY
+2025-09-03T14:49:04.8878340Z [36;1mecho "## 🧪 Cypress Test Results - chrome" >> $GITHUB_STEP_SUMMARY[0m
+2025-09-03T14:49:04.8878765Z [36;1mecho "| Metric | Value |" >> $GITHUB_STEP_SUMMARY[0m
+2025-09-03T14:49:04.8879121Z [36;1mecho "|--------|-------|" >> $GITHUB_STEP_SUMMARY[0m
+2025-09-03T14:49:04.8879480Z [36;1mecho "| Browser | chrome |" >> $GITHUB_STEP_SUMMARY[0m
+2025-09-03T14:49:04.8879863Z [36;1mecho "| Node Version | 22 |" >> $GITHUB_STEP_SUMMARY[0m
+2025-09-03T14:49:04.8880231Z [36;1mecho "| Status | failure |" >> $GITHUB_STEP_SUMMARY[0m
+2025-09-03T14:49:04.8880709Z [36;1mecho "| Commit | d1b673372f2fb2d95f8d97ac3be931a8c8fbf69a |" >> $GITHUB_STEP_SUMMARY[0m
+2025-09-03T14:49:04.8910576Z shell: /usr/bin/bash -e {0}
+2025-09-03T14:49:04.8910831Z env:
+2025-09-03T14:49:04.8911025Z   NODE_VERSION: 22
+2025-09-03T14:49:04.8911286Z   CYPRESS_CACHE_FOLDER: /home/runner/.cache/Cypress
+2025-09-03T14:49:04.8911594Z   TERM: xterm
+2025-09-03T14:49:04.8912006Z ##[endgroup]
