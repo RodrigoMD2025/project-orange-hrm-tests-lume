@@ -80,7 +80,7 @@ npx cypress run --spec "cypress/e2e/user.spec.cy.js"
 |---------|--------|-----------|----------|---------|
 | `admin.spec.cy.js` | 1 | ✅ 1 | ❌ 0 | 13s |
 | `timesheet.spec.cy.js` | 1 | ✅ 1 | ❌ 0 | 10s |
-|| `user.spec.cy.js` | 18 | ✅ 18 | ❌ 0 | ~1m 19s |
+| `user.spec.cy.js` | 18 | ✅ 18 | ❌ 0 | ~1m 19s |
 
 **Total**: 20/20 testes aprovados (100% de taxa de sucesso)
 
