@@ -242,7 +242,6 @@ npx cypress run --spec "cypress/e2e/user.spec.cy.js"
 
 ## 🎯 Próximos Passos
 
-- [ ] Integração com CI/CD (GitHub Actions / Jenkins)
 - [ ] Testes de performance com Lighthouse
 - [ ] Testes de acessibilidade (a11y)
 - [ ] Cobertura de mais módulos do OrangeHRM
