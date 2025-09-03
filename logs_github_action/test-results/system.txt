@@ -1,5 +1,0 @@
-2025-09-03T14:33:09.1350000Z Requested labels: ubuntu-latest
-2025-09-03T14:33:09.1350000Z Job defined at: RodrigoMD2025/project-orange-hrm-tests-lume/.github/workflows/cypress-tests.yml@refs/heads/master
-2025-09-03T14:33:09.1350000Z Waiting for a runner to pick up this job...
-2025-09-03T14:33:09.6240000Z Job is about to start running on the hosted runner: GitHub Actions 1000001105
-2025-09-03T14:33:09.6240000Z Job is waiting for a hosted runner to come online.

@@ -1,0 +1,488 @@
+﻿2025-09-03T14:40:41.1584938Z Current runner version: '2.328.0'
+2025-09-03T14:40:41.1611919Z ##[group]Runner Image Provisioner
+2025-09-03T14:40:41.1613694Z Hosted Compute Agent
+2025-09-03T14:40:41.1614804Z Version: 20250829.383
+2025-09-03T14:40:41.1615786Z Commit: 27cb235aab5b0e52e153a26cd86b4742e89dac5d
+2025-09-03T14:40:41.1617091Z Build Date: 2025-08-29T13:48:48Z
+2025-09-03T14:40:41.1617692Z ##[endgroup]
+2025-09-03T14:40:41.1618376Z ##[group]Operating System
+2025-09-03T14:40:41.1618932Z Ubuntu
+2025-09-03T14:40:41.1619413Z 24.04.3
+2025-09-03T14:40:41.1619931Z LTS
+2025-09-03T14:40:41.1620518Z ##[endgroup]
+2025-09-03T14:40:41.1621307Z ##[group]Runner Image
+2025-09-03T14:40:41.1622103Z Image: ubuntu-24.04
+2025-09-03T14:40:41.1622608Z Version: 20250831.1.0
+2025-09-03T14:40:41.1623567Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250831.1/images/ubuntu/Ubuntu2404-Readme.md
+2025-09-03T14:40:41.1625151Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250831.1
+2025-09-03T14:40:41.1626080Z ##[endgroup]
+2025-09-03T14:40:41.1627829Z ##[group]GITHUB_TOKEN Permissions
+2025-09-03T14:40:41.1629939Z Contents: read
+2025-09-03T14:40:41.1630811Z Metadata: read
+2025-09-03T14:40:41.1631338Z Packages: read
+2025-09-03T14:40:41.1631814Z ##[endgroup]
+2025-09-03T14:40:41.1633944Z Secret source: Actions
+2025-09-03T14:40:41.1634694Z Prepare workflow directory
+2025-09-03T14:40:41.2020342Z Prepare all required actions
+2025-09-03T14:40:41.2057842Z Getting action download info
+2025-09-03T14:40:41.6205322Z Download action repository 'actions/checkout@v4' (SHA:08eba0b27e820071cde6df949e0beb9ba4906955)
+2025-09-03T14:40:41.8114777Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2025-09-03T14:40:41.9020524Z Download action repository 'cypress-io/github-action@v6' (SHA:b8ba51a856ba5f4c15cf39007636d4ab04f23e3c)
+2025-09-03T14:40:42.4817229Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2025-09-03T14:40:42.7231175Z Complete job name: cypress-run (chrome)
+2025-09-03T14:40:42.7957102Z ##[group]Run actions/checkout@v4
+2025-09-03T14:40:42.7958364Z with:
+2025-09-03T14:40:42.7959250Z   repository: RodrigoMD2025/project-orange-hrm-tests-lume
+2025-09-03T14:40:42.7960627Z   token: ***
+2025-09-03T14:40:42.7961316Z   ssh-strict: true
+2025-09-03T14:40:42.7962038Z   ssh-user: git
+2025-09-03T14:40:42.7962761Z   persist-credentials: true
+2025-09-03T14:40:42.7963584Z   clean: true
+2025-09-03T14:40:42.7964315Z   sparse-checkout-cone-mode: true
+2025-09-03T14:40:42.7965204Z   fetch-depth: 1
+2025-09-03T14:40:42.7965922Z   fetch-tags: false
+2025-09-03T14:40:42.7966793Z   show-progress: true
+2025-09-03T14:40:42.7967552Z   lfs: false
+2025-09-03T14:40:42.7968222Z   submodules: false
+2025-09-03T14:40:42.7968968Z   set-safe-directory: true
+2025-09-03T14:40:42.7969995Z env:
+2025-09-03T14:40:42.7970635Z   NODE_VERSION: 22
+2025-09-03T14:40:42.7971330Z ##[endgroup]
+2025-09-03T14:40:42.9088438Z Syncing repository: RodrigoMD2025/project-orange-hrm-tests-lume
+2025-09-03T14:40:42.9091309Z ##[group]Getting Git version info
+2025-09-03T14:40:42.9093062Z Working directory is '/home/runner/work/project-orange-hrm-tests-lume/project-orange-hrm-tests-lume'
+2025-09-03T14:40:42.9095297Z [command]/usr/bin/git version
+2025-09-03T14:40:42.9140869Z git version 2.51.0
+2025-09-03T14:40:42.9168069Z ##[endgroup]
+2025-09-03T14:40:42.9183936Z Temporarily overriding HOME='/home/runner/work/_temp/26607044-21f2-4c42-a8d7-f294986904cc' before making global git config changes
+2025-09-03T14:40:42.9188777Z Adding repository directory to the temporary git global config as a safe directory
+2025-09-03T14:40:42.9199704Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/project-orange-hrm-tests-lume/project-orange-hrm-tests-lume
+2025-09-03T14:40:42.9237425Z Deleting the contents of '/home/runner/work/project-orange-hrm-tests-lume/project-orange-hrm-tests-lume'
+2025-09-03T14:40:42.9241619Z ##[group]Initializing the repository
+2025-09-03T14:40:42.9245796Z [command]/usr/bin/git init /home/runner/work/project-orange-hrm-tests-lume/project-orange-hrm-tests-lume
+2025-09-03T14:40:42.9345521Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-09-03T14:40:42.9347653Z hint: is subject to change. To configure the initial branch name to use in all
+2025-09-03T14:40:42.9349932Z hint: of your new repositories, which will suppress this warning, call:
+2025-09-03T14:40:42.9351566Z hint:
+2025-09-03T14:40:42.9353050Z hint: 	git config --global init.defaultBranch <name>
+2025-09-03T14:40:42.9354987Z hint:
+2025-09-03T14:40:42.9356959Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-09-03T14:40:42.9359953Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-09-03T14:40:42.9362297Z hint:
+2025-09-03T14:40:42.9363512Z hint: 	git branch -m <name>
+2025-09-03T14:40:42.9364923Z hint:
+2025-09-03T14:40:42.9366915Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2025-09-03T14:40:42.9370583Z Initialized empty Git repository in /home/runner/work/project-orange-hrm-tests-lume/project-orange-hrm-tests-lume/.git/
+2025-09-03T14:40:42.9374333Z [command]/usr/bin/git remote add origin https://github.com/RodrigoMD2025/project-orange-hrm-tests-lume
+2025-09-03T14:40:42.9402057Z ##[endgroup]
+2025-09-03T14:40:42.9404262Z ##[group]Disabling automatic garbage collection
+2025-09-03T14:40:42.9406285Z [command]/usr/bin/git config --local gc.auto 0
+2025-09-03T14:40:42.9435438Z ##[endgroup]
+2025-09-03T14:40:42.9437688Z ##[group]Setting up auth
+2025-09-03T14:40:42.9443057Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-09-03T14:40:42.9474957Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-09-03T14:40:42.9781186Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-09-03T14:40:42.9814417Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-09-03T14:40:43.0033388Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-09-03T14:40:43.0076324Z ##[endgroup]
+2025-09-03T14:40:43.0078871Z ##[group]Fetching the repository
+2025-09-03T14:40:43.0088311Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +d1b673372f2fb2d95f8d97ac3be931a8c8fbf69a:refs/remotes/origin/master
+2025-09-03T14:40:43.3211495Z From https://github.com/RodrigoMD2025/project-orange-hrm-tests-lume
+2025-09-03T14:40:43.3213300Z  * [new ref]         d1b673372f2fb2d95f8d97ac3be931a8c8fbf69a -> origin/master
+2025-09-03T14:40:43.3244361Z ##[endgroup]
+2025-09-03T14:40:43.3247274Z ##[group]Determining the checkout info
+2025-09-03T14:40:43.3250394Z ##[endgroup]
+2025-09-03T14:40:43.3252412Z [command]/usr/bin/git sparse-checkout disable
+2025-09-03T14:40:43.3292834Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-09-03T14:40:43.3322277Z ##[group]Checking out the ref
+2025-09-03T14:40:43.3325684Z [command]/usr/bin/git checkout --progress --force -B master refs/remotes/origin/master
+2025-09-03T14:40:43.3419323Z Reset branch 'master'
+2025-09-03T14:40:43.3421996Z branch 'master' set up to track 'origin/master'.
+2025-09-03T14:40:43.3429561Z ##[endgroup]
+2025-09-03T14:40:43.3464393Z [command]/usr/bin/git log -1 --format=%H
+2025-09-03T14:40:43.3486885Z d1b673372f2fb2d95f8d97ac3be931a8c8fbf69a
+2025-09-03T14:40:43.3762844Z ##[group]Run actions/setup-node@v4
+2025-09-03T14:40:43.3763840Z with:
+2025-09-03T14:40:43.3764512Z   node-version: 22
+2025-09-03T14:40:43.3765243Z   cache: npm
+2025-09-03T14:40:43.3765952Z   always-auth: false
+2025-09-03T14:40:43.3766919Z   check-latest: false
+2025-09-03T14:40:43.3767936Z   token: ***
+2025-09-03T14:40:43.3768831Z env:
+2025-09-03T14:40:43.3769474Z   NODE_VERSION: 22
+2025-09-03T14:40:43.3770206Z ##[endgroup]
+2025-09-03T14:40:43.5596091Z Found in cache @ /opt/hostedtoolcache/node/22.19.0/x64
+2025-09-03T14:40:43.5601960Z ##[group]Environment details
+2025-09-03T14:40:46.4222245Z node: v22.19.0
+2025-09-03T14:40:46.4222772Z npm: 10.9.3
+2025-09-03T14:40:46.4223112Z yarn: 1.22.22
+2025-09-03T14:40:46.4227345Z ##[endgroup]
+2025-09-03T14:40:46.4245869Z [command]/opt/hostedtoolcache/node/22.19.0/x64/bin/npm config get cache
+2025-09-03T14:40:46.7201941Z /home/runner/.npm
+2025-09-03T14:40:46.8843289Z Cache hit for: node-cache-Linux-x64-npm-ffba805d73e12b64e490d6c8ae65162c516d6cdd4af6672d36855584cad6350a
+2025-09-03T14:40:47.7641272Z Received 9500241 of 9500241 (100.0%), 13.3 MBs/sec
+2025-09-03T14:40:47.7642220Z Cache Size: ~9 MB (9500241 B)
+2025-09-03T14:40:47.7664942Z [command]/usr/bin/tar -xf /home/runner/work/_temp/4378ee97-a4ec-485f-a18c-de790063974b/cache.tzst -P -C /home/runner/work/project-orange-hrm-tests-lume/project-orange-hrm-tests-lume --use-compress-program unzstd
+2025-09-03T14:40:47.8305242Z Cache restored successfully
+2025-09-03T14:40:47.8329077Z Cache restored from key: node-cache-Linux-x64-npm-ffba805d73e12b64e490d6c8ae65162c516d6cdd4af6672d36855584cad6350a
+2025-09-03T14:40:47.8471883Z ##[group]Run npm ci
+2025-09-03T14:40:47.8472193Z [36;1mnpm ci[0m
+2025-09-03T14:40:47.8597364Z shell: /usr/bin/bash -e {0}
+2025-09-03T14:40:47.8597733Z env:
+2025-09-03T14:40:47.8597990Z   NODE_VERSION: 22
+2025-09-03T14:40:47.8598266Z ##[endgroup]
+2025-09-03T14:41:03.1310090Z 
+2025-09-03T14:41:03.1318370Z added 272 packages, and audited 273 packages in 15s
+2025-09-03T14:41:03.1318742Z 
+2025-09-03T14:41:03.1318979Z 67 packages are looking for funding
+2025-09-03T14:41:03.1319369Z   run `npm fund` for details
+2025-09-03T14:41:03.1319716Z 
+2025-09-03T14:41:03.1320045Z found 0 vulnerabilities
+2025-09-03T14:41:03.1937623Z ##[group]Run cypress-io/github-action@v6
+2025-09-03T14:41:03.1937935Z with:
+2025-09-03T14:41:03.1938129Z   browser: chrome
+2025-09-03T14:41:03.1938327Z   install: false
+2025-09-03T14:41:03.1938542Z   component: false
+2025-09-03T14:41:03.1938740Z   record: false
+2025-09-03T14:41:03.1938940Z   publish-summary: true
+2025-09-03T14:41:03.1939145Z env:
+2025-09-03T14:41:03.1939335Z   NODE_VERSION: 22
+2025-09-03T14:41:03.1939892Z   GITHUB_TOKEN: ***
+2025-09-03T14:41:03.1940110Z   COMMIT_INFO_BRANCH: master
+2025-09-03T14:41:03.1940395Z   COMMIT_INFO_SHA: d1b673372f2fb2d95f8d97ac3be931a8c8fbf69a
+2025-09-03T14:41:03.1940697Z ##[endgroup]
+2025-09-03T14:41:03.3565534Z Skipping install because install parameter is false
+2025-09-03T14:41:03.9153226Z It looks like this is your first time using Cypress: 13.17.0
+2025-09-03T14:41:03.9153697Z 
+2025-09-03T14:41:03.9176374Z [STARTED] Task without title.
+2025-09-03T14:41:05.5818353Z [SUCCESS] Task without title.
+2025-09-03T14:41:05.5821905Z 
+2025-09-03T14:41:05.5823486Z Opening Cypress...
+2025-09-03T14:41:06.2013702Z 
+2025-09-03T14:41:06.2015348Z DevTools listening on ws://127.0.0.1:46003/devtools/browser/0612482c-652c-46f8-a21a-b410eff60429
+2025-09-03T14:41:10.9610277Z 
+2025-09-03T14:41:10.9967122Z [90m====================================================================================================[39m
+2025-09-03T14:41:10.9967462Z 
+2025-09-03T14:41:10.9968524Z [0m  ([4m[1mRun Starting[22m[24m)[0m
+2025-09-03T14:41:10.9968908Z 
+2025-09-03T14:41:11.0049442Z [90m  ┌[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m┐[39m
+2025-09-03T14:41:11.0054730Z [90m  │[39m [90mCypress:[39m        13.17.0                                                                        [90m│[39m
+2025-09-03T14:41:11.0056177Z [90m  │[39m [90mBrowser:[39m        Chrome 139 [90m(headless)[39m                                                          [90m│[39m
+2025-09-03T14:41:11.0058296Z [90m  │[39m [90mNode Version:[39m   [0mv20.19.4 [90m(/home/runner/actions-runner/cached/externals/node20/bin/node)[[0m       [90m│[39m
+2025-09-03T14:41:11.0059964Z [90m  │[39m                 [0m39m[0m                                                                            [90m│[39m
+2025-09-03T14:41:11.0061447Z [90m  │[39m [90mSpecs:[39m          [0m3 found (admin.spec.cy.js, timesheet.spec.cy.js, user.spec.cy.js)[0m              [90m│[39m
+2025-09-03T14:41:11.0063125Z [90m  │[39m [90mSearched:[39m       [0mcypress/e2e/**/*.cy.{js,jsx,ts,tsx}[0m                                            [90m│[39m
+2025-09-03T14:41:11.0071031Z [90m  └[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m┘[39m
+2025-09-03T14:41:11.0074992Z 
+2025-09-03T14:41:11.0077975Z Remove .jsons folder /home/runner/work/project-orange-hrm-tests-lume/project-orange-hrm-tests-lume/cypress/reports/html/.jsons
+2025-09-03T14:41:11.0129419Z 
+2025-09-03T14:41:11.0141174Z [90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m
+2025-09-03T14:41:11.0144178Z                                                                                                     
+2025-09-03T14:41:11.0144906Z   Running:  [90madmin.spec.cy.js[39m                                                                [90m(1 of 3)[39m
+2025-09-03T14:41:14.2710001Z 
+2025-09-03T14:41:14.2714438Z [0m[0m
+2025-09-03T14:41:14.2771583Z [0m  Testes do Módulo de Administração[0m
+2025-09-03T14:42:00.7299552Z {
+2025-09-03T14:42:00.7309367Z   testAttemptIndex: [33m0[39m,
+2025-09-03T14:42:00.7310267Z   size: [33m107528[39m,
+2025-09-03T14:42:00.7341098Z   takenAt: [32m'2025-09-03T14:42:00.545Z'[39m,
+2025-09-03T14:42:00.7341959Z   dimensions: { width: [33m1280[39m, height: [33m633[39m },
+2025-09-03T14:42:00.7342601Z   multipart: [33mfalse[39m,
+2025-09-03T14:42:00.7343148Z   specName: [32m'admin.spec.cy.js'[39m,
+2025-09-03T14:42:00.7343715Z   testFailure: [33mtrue[39m,
+2025-09-03T14:42:00.7345831Z   path: [32m'/home/runner/work/project-orange-hrm-tests-lume/project-orange-hrm-tests-lume/cypress/screenshots/admin.spec.cy.js/Testes do Módulo de Administração -- Deve gerenciar contas de usuário (failed).png'[39m,
+2025-09-03T14:42:00.7347640Z   scaled: [33mtrue[39m,
+2025-09-03T14:42:00.7348055Z   blackout: [],
+2025-09-03T14:42:00.7348450Z   duration: [33m181[39m
+2025-09-03T14:42:00.7348812Z }
+2025-09-03T14:42:28.3160491Z {
+2025-09-03T14:42:28.3161262Z   testAttemptIndex: [33m1[39m,
+2025-09-03T14:42:28.3161791Z   size: [33m107215[39m,
+2025-09-03T14:42:28.3162398Z   takenAt: [32m'2025-09-03T14:42:28.219Z'[39m,
+2025-09-03T14:42:28.3163175Z   dimensions: { width: [33m1280[39m, height: [33m633[39m },
+2025-09-03T14:42:28.3163890Z   multipart: [33mfalse[39m,
+2025-09-03T14:42:28.3164330Z   specName: [32m'admin.spec.cy.js'[39m,
+2025-09-03T14:42:28.3164909Z   testFailure: [33mtrue[39m,
+2025-09-03T14:42:28.3167386Z   path: [32m'/home/runner/work/project-orange-hrm-tests-lume/project-orange-hrm-tests-lume/cypress/screenshots/admin.spec.cy.js/Testes do Módulo de Administração -- Deve gerenciar contas de usuário (failed) (attempt 2).png'[39m,
+2025-09-03T14:42:28.3169285Z   scaled: [33mtrue[39m,
+2025-09-03T14:42:28.3169654Z   blackout: [],
+2025-09-03T14:42:28.3170048Z   duration: [33m98[39m
+2025-09-03T14:42:28.3170372Z }
+2025-09-03T14:42:57.0622196Z {
+2025-09-03T14:42:57.0623001Z   testAttemptIndex: [33m2[39m,
+2025-09-03T14:42:57.0623550Z   size: [33m107139[39m,
+2025-09-03T14:42:57.0624144Z   takenAt: [32m'2025-09-03T14:42:56.970Z'[39m,
+2025-09-03T14:42:57.0624935Z   dimensions: { width: [33m1280[39m, height: [33m633[39m },
+2025-09-03T14:42:57.0625630Z   multipart: [33mfalse[39m,
+2025-09-03T14:42:57.0626285Z   specName: [32m'admin.spec.cy.js'[39m,
+2025-09-03T14:42:57.0627182Z   testFailure: [33mtrue[39m,
+2025-09-03T14:42:57.0628906Z   path: [32m'/home/runner/work/project-orange-hrm-tests-lume/project-orange-hrm-tests-lume/cypress/screenshots/admin.spec.cy.js/Testes do Módulo de Administração -- Deve gerenciar contas de usuário (failed) (attempt 3).png'[39m,
+2025-09-03T14:42:57.0630047Z   scaled: [33mtrue[39m,
+2025-09-03T14:42:57.0630302Z   blackout: [],
+2025-09-03T14:42:57.0630551Z   duration: [33m93[39m
+2025-09-03T14:42:57.0630797Z }
+2025-09-03T14:42:57.0663050Z   [31m  1) Deve gerenciar contas de usuário[0m
+2025-09-03T14:42:57.0673739Z 
+2025-09-03T14:42:57.1210131Z 
+2025-09-03T14:42:57.1212052Z [92m [0m[32m 0 passing[0m[90m (2m)[0m
+2025-09-03T14:42:57.1212924Z [31m  1 failing[0m
+2025-09-03T14:42:57.1213513Z 
+2025-09-03T14:42:57.1217794Z [0m  1) Testes do Módulo de Administração
+2025-09-03T14:42:57.1218535Z        Deve gerenciar contas de usuário:
+2025-09-03T14:42:57.1219942Z [0m[31m     AssertionError: Timed out retrying after 10000ms: Expected to find element: `.oxd-toast`, but never found it.[0m[90m
+2025-09-03T14:42:57.1221299Z       at Context.eval (webpack://projeto-orangehrm-lume/./cypress/e2e/admin.spec.cy.js:61:7)
+2025-09-03T14:42:57.1222112Z [0m
+2025-09-03T14:42:57.1222288Z 
+2025-09-03T14:42:57.1222297Z 
+2025-09-03T14:42:57.1246712Z [[90mmochawesome[39m] Report JSON saved to /home/runner/work/project-orange-hrm-tests-lume/project-orange-hrm-tests-lume/cypress/reports/html/.jsons/mochawesome.json
+2025-09-03T14:42:57.1248460Z 
+2025-09-03T14:42:58.1383578Z 
+2025-09-03T14:42:58.1385759Z [31m  ([4m[1mResults[22m[24m)[39m
+2025-09-03T14:42:58.1404019Z 
+2025-09-03T14:42:58.1422087Z [90m  ┌[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m┐[39m
+2025-09-03T14:42:58.1426682Z [90m  │[39m [90mTests:[39m        [31m1[39m                                                                                [90m│[39m
+2025-09-03T14:42:58.1428099Z [90m  │[39m [90mPassing:[39m      [31m0[39m                                                                                [90m│[39m
+2025-09-03T14:42:58.1429464Z [90m  │[39m [90mFailing:[39m      [31m1[39m                                                                                [90m│[39m
+2025-09-03T14:42:58.1431226Z [90m  │[39m [90mPending:[39m      [31m0[39m                                                                                [90m│[39m
+2025-09-03T14:42:58.1432644Z [90m  │[39m [90mSkipped:[39m      [31m0[39m                                                                                [90m│[39m
+2025-09-03T14:42:58.1433992Z [90m  │[39m [90mScreenshots:[39m  [31m3[39m                                                                                [90m│[39m
+2025-09-03T14:42:58.1435327Z [90m  │[39m [90mVideo:[39m        [31mtrue[39m                                                                             [90m│[39m
+2025-09-03T14:42:58.1436854Z [90m  │[39m [90mDuration:[39m     [31m1 minute, 42 seconds[39m                                                             [90m│[39m
+2025-09-03T14:42:58.1438346Z [90m  │[39m [90mSpec Ran:[39m     [31m[31madmin.spec.cy.js[31m[39m                                                                 [90m│[39m
+2025-09-03T14:42:58.1445568Z [90m  └[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m┘[39m
+2025-09-03T14:42:58.1456875Z 
+2025-09-03T14:42:58.1456905Z 
+2025-09-03T14:42:58.1457191Z [33m  ([4m[1mScreenshots[22m[24m)[39m
+2025-09-03T14:42:58.1457391Z 
+2025-09-03T14:42:58.1458297Z [90m [39m -  [0m/home/runner/work/project-orange-hrm-tests-lume/project-orange-hrm-tests-lume/cy[0m     [90m[90m(1280x633)[90m[39m
+2025-09-03T14:42:58.1459377Z [90m [39m    [0mpress/screenshots/admin.spec.cy.js/Testes do Módulo de Administração -- Deve ger[0m               
+2025-09-03T14:42:58.1460213Z [90m [39m    [0menciar contas de usuário (failed).png[0m                                                          
+2025-09-03T14:42:58.1461308Z [90m [39m -  [0m/home/runner/work/project-orange-hrm-tests-lume/project-orange-hrm-tests-lume/cy[0m     [90m[90m(1280x633)[90m[39m
+2025-09-03T14:42:58.1462303Z [90m [39m    [0mpress/screenshots/admin.spec.cy.js/Testes do Módulo de Administração -- Deve ger[0m               
+2025-09-03T14:42:58.1463279Z [90m [39m    [0menciar contas de usuário (failed) (attempt 2).png[0m                                              
+2025-09-03T14:42:58.1464692Z [90m [39m -  [0m/home/runner/work/project-orange-hrm-tests-lume/project-orange-hrm-tests-lume/cy[0m     [90m[90m(1280x633)[90m[39m
+2025-09-03T14:42:58.1466038Z [90m [39m    [0mpress/screenshots/admin.spec.cy.js/Testes do Módulo de Administração -- Deve ger[0m               
+2025-09-03T14:42:58.1467129Z [90m [39m    [0menciar contas de usuário (failed) (attempt 3).png[0m                                              
+2025-09-03T14:42:58.1467541Z 
+2025-09-03T14:42:58.1924012Z 
+2025-09-03T14:42:58.1925366Z [36m  ([4m[1mVideo[22m[24m)[39m
+2025-09-03T14:42:58.1926051Z 
+2025-09-03T14:42:58.1928103Z   -  Video output: [36m/home/runner/work/project-orange-hrm-tests-lume/project-orange-hrm-tests-lume/cypress/videos/admin.spec.cy.js.mp4[39m
+2025-09-03T14:42:58.1929068Z 
+2025-09-03T14:42:58.1929079Z 
+2025-09-03T14:42:58.1937972Z [90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m
+2025-09-03T14:42:58.1942086Z                                                                                                     
+2025-09-03T14:42:58.1949182Z   Running:  [90mtimesheet.spec.cy.js[39m                                                            [90m(2 of 3)[39m
+2025-09-03T14:42:59.6726149Z 
+2025-09-03T14:42:59.6729790Z [0m[0m
+2025-09-03T14:42:59.6759679Z [0m  Testes de Rastreamento de Tempo[0m
+2025-09-03T14:43:38.3358933Z   [32m  ✓[0m[90m Deve criar uma entrada de timesheet[0m[31m (38634ms)[0m
+2025-09-03T14:43:38.3360835Z 
+2025-09-03T14:43:38.3657426Z 
+2025-09-03T14:43:38.3691486Z [92m [0m[32m 1 passing[0m[90m (39s)[0m
+2025-09-03T14:43:38.3691865Z 
+2025-09-03T14:43:38.3865446Z [[90mmochawesome[39m] Report JSON saved to /home/runner/work/project-orange-hrm-tests-lume/project-orange-hrm-tests-lume/cypress/reports/html/.jsons/mochawesome_001.json
+2025-09-03T14:43:38.3866767Z 
+2025-09-03T14:43:39.4098291Z 
+2025-09-03T14:43:39.4099730Z [32m  ([4m[1mResults[22m[24m)[39m
+2025-09-03T14:43:39.4117405Z 
+2025-09-03T14:43:39.4138465Z [90m  ┌[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m┐[39m
+2025-09-03T14:43:39.4141891Z [90m  │[39m [90mTests:[39m        [32m1[39m                                                                                [90m│[39m
+2025-09-03T14:43:39.4143021Z [90m  │[39m [90mPassing:[39m      [32m1[39m                                                                                [90m│[39m
+2025-09-03T14:43:39.4143893Z [90m  │[39m [90mFailing:[39m      [32m0[39m                                                                                [90m│[39m
+2025-09-03T14:43:39.4144739Z [90m  │[39m [90mPending:[39m      [32m0[39m                                                                                [90m│[39m
+2025-09-03T14:43:39.4145575Z [90m  │[39m [90mSkipped:[39m      [32m0[39m                                                                                [90m│[39m
+2025-09-03T14:43:39.4146684Z [90m  │[39m [90mScreenshots:[39m  [32m0[39m                                                                                [90m│[39m
+2025-09-03T14:43:39.4147664Z [90m  │[39m [90mVideo:[39m        [32mtrue[39m                                                                             [90m│[39m
+2025-09-03T14:43:39.4149024Z [90m  │[39m [90mDuration:[39m     [32m38 seconds[39m                                                                       [90m│[39m
+2025-09-03T14:43:39.4150435Z [90m  │[39m [90mSpec Ran:[39m     [32m[32mtimesheet.spec.cy.js[32m[39m                                                             [90m│[39m
+2025-09-03T14:43:39.4157308Z [90m  └[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m┘[39m
+2025-09-03T14:43:39.4160905Z 
+2025-09-03T14:43:39.4462674Z 
+2025-09-03T14:43:39.4464295Z [36m  ([4m[1mVideo[22m[24m)[39m
+2025-09-03T14:43:39.4464684Z 
+2025-09-03T14:43:39.4465793Z   -  Video output: [36m/home/runner/work/project-orange-hrm-tests-lume/project-orange-hrm-tests-lume/cypress/videos/timesheet.spec.cy.js.mp4[39m
+2025-09-03T14:43:39.4467076Z 
+2025-09-03T14:43:39.4467324Z 
+2025-09-03T14:43:39.4483218Z [90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m
+2025-09-03T14:43:39.4485466Z                                                                                                     
+2025-09-03T14:43:39.4486056Z   Running:  [90muser.spec.cy.js[39m                                                                 [90m(3 of 3)[39m
+2025-09-03T14:43:40.9195412Z 
+2025-09-03T14:43:40.9197836Z [0m[0m
+2025-09-03T14:43:40.9223534Z [0m  Testes de Autenticação[0m
+2025-09-03T14:43:57.5544602Z   [32m  ✓[0m[90m Deve fazer login com credenciais válidas[0m[31m (16622ms)[0m
+2025-09-03T14:44:06.8769968Z   [32m  ✓[0m[90m Deve exibir erro com credenciais inválidas[0m[33m (9277ms)[0m
+2025-09-03T14:44:11.0082593Z   [32m  ✓[0m[90m Deve validar campos obrigatórios no login[0m
+2025-09-03T14:44:14.7449822Z   [32m  ✓[0m[90m Deve exibir erro ao preencher apenas o usuário[0m
+2025-09-03T14:44:19.4318359Z   [32m  ✓[0m[90m Deve exibir erro ao preencher apenas a senha[0m
+2025-09-03T14:44:34.7543213Z   [32m  ✓[0m[90m Deve fazer login com username em minúsculas (case-insensitive)[0m[31m (15288ms)[0m
+2025-09-03T14:44:38.6606483Z   [32m  ✓[0m[90m Deve funcionar com navegação por teclado[0m
+2025-09-03T14:44:44.1093210Z   [32m  ✓[0m[90m Deve validar endpoint da API de login[0m[33m (5420ms)[0m
+2025-09-03T14:45:06.2632338Z   [32m  ✓[0m[90m Deve testar funcionalidade de esqueceu senha[0m[31m (22121ms)[0m
+2025-09-03T14:45:15.7179955Z   [32m  ✓[0m[90m Deve validar username inválido no esqueceu senha[0m[33m (9421ms)[0m
+2025-09-03T14:45:23.3671892Z   [32m  ✓[0m[90m Deve validar campos vazios no esqueceu senha[0m[33m (7605ms)[0m
+2025-09-03T14:45:23.3924049Z 
+2025-09-03T14:45:23.3925269Z [0m  Testes de Funcionalidade do Usuário[0m
+2025-09-03T14:46:01.2777008Z   [32m  ✓[0m[90m Deve fazer logout com sucesso[0m[31m (37855ms)[0m
+2025-09-03T14:46:54.1793801Z   [32m  ✓[0m[90m Deve atualizar informações pessoais do usuário[0m[31m (52840ms)[0m
+2025-09-03T14:47:16.8056291Z   [32m  ✓[0m[90m Deve validar mensagens de erro ao tentar atualizar informações inválidas[0m[31m (22572ms)[0m
+2025-09-03T14:47:52.6973455Z   [32m  ✓[0m[90m Deve adicionar novo funcionário[0m[31m (35842ms)[0m
+2025-09-03T14:48:12.9683252Z   [32m  ✓[0m[90m Deve pesquisar funcionário[0m[31m (20214ms)[0m
+2025-09-03T14:48:37.1226961Z   [32m  ✓[0m[90m Deve validar campos obrigatórios ao adicionar funcionário[0m[31m (24117ms)[0m
+2025-09-03T14:48:58.5260209Z   [32m  ✓[0m[90m Deve cancelar adição de funcionário[0m[31m (21349ms)[0m
+2025-09-03T14:48:58.5267144Z 
+2025-09-03T14:48:58.5459904Z 
+2025-09-03T14:48:58.5460902Z [92m [0m[32m 18 passing[0m[90m (5m)[0m
+2025-09-03T14:48:58.5462912Z 
+2025-09-03T14:48:58.5495398Z [[90mmochawesome[39m] Report JSON saved to /home/runner/work/project-orange-hrm-tests-lume/project-orange-hrm-tests-lume/cypress/reports/html/.jsons/mochawesome_002.json
+2025-09-03T14:48:58.5500888Z 
+2025-09-03T14:48:59.5738609Z 
+2025-09-03T14:48:59.5739880Z [32m  ([4m[1mResults[22m[24m)[39m
+2025-09-03T14:48:59.5757408Z 
+2025-09-03T14:48:59.5773164Z [90m  ┌[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m┐[39m
+2025-09-03T14:48:59.5777959Z [90m  │[39m [90mTests:[39m        [32m18[39m                                                                               [90m│[39m
+2025-09-03T14:48:59.5779247Z [90m  │[39m [90mPassing:[39m      [32m18[39m                                                                               [90m│[39m
+2025-09-03T14:48:59.5780495Z [90m  │[39m [90mFailing:[39m      [32m0[39m                                                                                [90m│[39m
+2025-09-03T14:48:59.5781683Z [90m  │[39m [90mPending:[39m      [32m0[39m                                                                                [90m│[39m
+2025-09-03T14:48:59.5782883Z [90m  │[39m [90mSkipped:[39m      [32m0[39m                                                                                [90m│[39m
+2025-09-03T14:48:59.5784194Z [90m  │[39m [90mScreenshots:[39m  [32m0[39m                                                                                [90m│[39m
+2025-09-03T14:48:59.5785835Z [90m  │[39m [90mVideo:[39m        [32mtrue[39m                                                                             [90m│[39m
+2025-09-03T14:48:59.5787350Z [90m  │[39m [90mDuration:[39m     [32m5 minutes, 17 seconds[39m                                                            [90m│[39m
+2025-09-03T14:48:59.5788654Z [90m  │[39m [90mSpec Ran:[39m     [32m[32muser.spec.cy.js[32m[39m                                                                  [90m│[39m
+2025-09-03T14:48:59.5795528Z [90m  └[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m┘[39m
+2025-09-03T14:48:59.5800270Z 
+2025-09-03T14:48:59.5800297Z 
+2025-09-03T14:48:59.5800638Z [36m  ([4m[1mVideo[22m[24m)[39m
+2025-09-03T14:48:59.5800913Z 
+2025-09-03T14:48:59.5802313Z   -  Video output: [36m/home/runner/work/project-orange-hrm-tests-lume/project-orange-hrm-tests-lume/cypress/videos/user.spec.cy.js.mp4[39m
+2025-09-03T14:48:59.5803197Z 
+2025-09-03T14:48:59.5809582Z Start generate report process
+2025-09-03T14:48:59.5813107Z Read and merge jsons from "/home/runner/work/project-orange-hrm-tests-lume/project-orange-hrm-tests-lume/cypress/reports/html/.jsons"
+2025-09-03T14:48:59.5997977Z Copy media folder from "/home/runner/work/project-orange-hrm-tests-lume/project-orange-hrm-tests-lume/cypress/videos" to "/home/runner/work/project-orange-hrm-tests-lume/project-orange-hrm-tests-lume/cypress/reports/html/videos"
+2025-09-03T14:48:59.6035276Z Enhance report
+2025-09-03T14:48:59.6062944Z Create HTML report
+2025-09-03T14:48:59.6401673Z HTML report successfully created!
+2025-09-03T14:48:59.6402789Z /home/runner/work/project-orange-hrm-tests-lume/project-orange-hrm-tests-lume/cypress/reports/html/index.html
+2025-09-03T14:48:59.6426742Z 
+2025-09-03T14:48:59.6758129Z [90m====================================================================================================[39m
+2025-09-03T14:48:59.6758700Z 
+2025-09-03T14:48:59.6759152Z [0m  ([4m[1mRun Finished[22m[24m)[0m
+2025-09-03T14:48:59.6779411Z 
+2025-09-03T14:48:59.6779484Z 
+2025-09-03T14:48:59.6801554Z [90m   [39m    [90mSpec[39m                                              [90mTests[39m  [90mPassing[39m  [90mFailing[39m  [90mPending[39m  [90mSkipped[39m [90m [39m
+2025-09-03T14:48:59.6807814Z [90m  ┌[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m┐[39m
+2025-09-03T14:48:59.6812302Z [90m  │[39m [31m✖[39m  [0madmin.spec.cy.js[0m                         [90m01:42[39m        [0m1[0m        [90m-[39m        [31m1[39m        [90m-[39m        [90m-[39m [90m│[39m
+2025-09-03T14:48:59.6818573Z [90m  ├[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m┤[39m
+2025-09-03T14:48:59.6823858Z [90m  │[39m [32m✔[39m  [0mtimesheet.spec.cy.js[0m                     [90m00:38[39m        [0m1[0m        [32m1[39m        [90m-[39m        [90m-[39m        [90m-[39m [90m│[39m
+2025-09-03T14:48:59.6833211Z [90m  ├[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m┤[39m
+2025-09-03T14:48:59.6838233Z [90m  │[39m [32m✔[39m  [0muser.spec.cy.js[0m                          [90m05:17[39m       [0m18[0m       [32m18[39m        [90m-[39m        [90m-[39m        [90m-[39m [90m│[39m
+2025-09-03T14:48:59.6845352Z [90m  └[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m┘[39m
+2025-09-03T14:48:59.6850474Z [90m   [39m [31m✖[39m  [31m1 of 3 failed (33%)[39m                      [90m07:39[39m       [0m20[0m       [32m19[39m        [31m1[39m        [90m-[39m        [90m-[39m [90m [39m
+2025-09-03T14:48:59.6851134Z 
+2025-09-03T14:48:59.7601987Z ##[error]Cypress tests: 1 failed
+2025-09-03T14:48:59.7731427Z ##[group]Run actions/upload-artifact@v4
+2025-09-03T14:48:59.7731758Z with:
+2025-09-03T14:48:59.7731968Z   name: cypress-reports-chrome
+2025-09-03T14:48:59.7732218Z   path: cypress/reports/
+2025-09-03T14:48:59.7732438Z   retention-days: 30
+2025-09-03T14:48:59.7732652Z   if-no-files-found: warn
+2025-09-03T14:48:59.7732875Z   compression-level: 6
+2025-09-03T14:48:59.7733099Z   overwrite: false
+2025-09-03T14:48:59.7733305Z   include-hidden-files: false
+2025-09-03T14:48:59.7733527Z env:
+2025-09-03T14:48:59.7733691Z   NODE_VERSION: 22
+2025-09-03T14:48:59.7733927Z   CYPRESS_CACHE_FOLDER: /home/runner/.cache/Cypress
+2025-09-03T14:48:59.7734217Z   TERM: xterm
+2025-09-03T14:48:59.7734395Z ##[endgroup]
+2025-09-03T14:48:59.9860724Z With the provided path, there will be 4 files uploaded
+2025-09-03T14:48:59.9865648Z Artifact name is valid!
+2025-09-03T14:48:59.9867525Z Root directory input is valid!
+2025-09-03T14:49:00.1731301Z Beginning upload of artifact content to blob storage
+2025-09-03T14:49:01.2807593Z Uploaded bytes 8388608
+2025-09-03T14:49:01.5104217Z Uploaded bytes 16777216
+2025-09-03T14:49:01.6767609Z Uploaded bytes 25131307
+2025-09-03T14:49:01.7328080Z Finished uploading artifact content to blob storage!
+2025-09-03T14:49:01.7331670Z SHA256 digest of uploaded artifact zip is 1a8b006123a426fb6e16dc655af4ce906bfcaec172e87aefef0e8a76c643a96a
+2025-09-03T14:49:01.7333415Z Finalizing artifact upload
+2025-09-03T14:49:01.8508943Z Artifact cypress-reports-chrome.zip successfully finalized. Artifact ID 3917575322
+2025-09-03T14:49:01.8512587Z Artifact cypress-reports-chrome has been successfully uploaded! Final size is 25131307 bytes. Artifact ID is 3917575322
+2025-09-03T14:49:01.8519273Z Artifact download URL: https://github.com/RodrigoMD2025/project-orange-hrm-tests-lume/actions/runs/17437037226/artifacts/3917575322
+2025-09-03T14:49:01.8682107Z ##[group]Run actions/upload-artifact@v4
+2025-09-03T14:49:01.8682571Z with:
+2025-09-03T14:49:01.8682888Z   name: cypress-videos-chrome
+2025-09-03T14:49:01.8683291Z   path: cypress/videos/
+2025-09-03T14:49:01.8683642Z   retention-days: 7
+2025-09-03T14:49:01.8683972Z   if-no-files-found: warn
+2025-09-03T14:49:01.8684340Z   compression-level: 6
+2025-09-03T14:49:01.8684709Z   overwrite: false
+2025-09-03T14:49:01.8685046Z   include-hidden-files: false
+2025-09-03T14:49:01.8685411Z env:
+2025-09-03T14:49:01.8685689Z   NODE_VERSION: 22
+2025-09-03T14:49:01.8686293Z   CYPRESS_CACHE_FOLDER: /home/runner/.cache/Cypress
+2025-09-03T14:49:01.8686941Z   TERM: xterm
+2025-09-03T14:49:01.8687239Z ##[endgroup]
+2025-09-03T14:49:02.1005448Z With the provided path, there will be 3 files uploaded
+2025-09-03T14:49:02.1010281Z Artifact name is valid!
+2025-09-03T14:49:02.1012424Z Root directory input is valid!
+2025-09-03T14:49:02.2595128Z Beginning upload of artifact content to blob storage
+2025-09-03T14:49:03.1623086Z Uploaded bytes 8388608
+2025-09-03T14:49:03.5466422Z Uploaded bytes 16777216
+2025-09-03T14:49:03.6967256Z Uploaded bytes 24652832
+2025-09-03T14:49:03.7489790Z Finished uploading artifact content to blob storage!
+2025-09-03T14:49:03.7493937Z SHA256 digest of uploaded artifact zip is 3bf62ba1326dbbd46db0b906b5cae054a02be5f135edf08215aaf44850b41b5e
+2025-09-03T14:49:03.7495593Z Finalizing artifact upload
+2025-09-03T14:49:03.8853410Z Artifact cypress-videos-chrome.zip successfully finalized. Artifact ID 3917575695
+2025-09-03T14:49:03.8855594Z Artifact cypress-videos-chrome has been successfully uploaded! Final size is 24652832 bytes. Artifact ID is 3917575695
+2025-09-03T14:49:03.8862490Z Artifact download URL: https://github.com/RodrigoMD2025/project-orange-hrm-tests-lume/actions/runs/17437037226/artifacts/3917575695
+2025-09-03T14:49:03.9060520Z ##[group]Run actions/upload-artifact@v4
+2025-09-03T14:49:03.9060828Z with:
+2025-09-03T14:49:03.9061043Z   name: cypress-screenshots-chrome
+2025-09-03T14:49:03.9061324Z   path: cypress/screenshots/
+2025-09-03T14:49:03.9061572Z   retention-days: 14
+2025-09-03T14:49:03.9061794Z   if-no-files-found: warn
+2025-09-03T14:49:03.9062026Z   compression-level: 6
+2025-09-03T14:49:03.9062243Z   overwrite: false
+2025-09-03T14:49:03.9062458Z   include-hidden-files: false
+2025-09-03T14:49:03.9062687Z env:
+2025-09-03T14:49:03.9062868Z   NODE_VERSION: 22
+2025-09-03T14:49:03.9063115Z   CYPRESS_CACHE_FOLDER: /home/runner/.cache/Cypress
+2025-09-03T14:49:03.9063399Z   TERM: xterm
+2025-09-03T14:49:03.9063589Z ##[endgroup]
+2025-09-03T14:49:04.1226220Z With the provided path, there will be 3 files uploaded
+2025-09-03T14:49:04.1231733Z Artifact name is valid!
+2025-09-03T14:49:04.1233961Z Root directory input is valid!
+2025-09-03T14:49:04.2905518Z Beginning upload of artifact content to blob storage
+2025-09-03T14:49:04.6842203Z Uploaded bytes 310847
+2025-09-03T14:49:04.7399711Z Finished uploading artifact content to blob storage!
+2025-09-03T14:49:04.7403620Z SHA256 digest of uploaded artifact zip is 4171d2d1ce37fa50852110837696e56ee8e92de54cef18321d56be898a4d23e8
+2025-09-03T14:49:04.7405229Z Finalizing artifact upload
+2025-09-03T14:49:04.8764708Z Artifact cypress-screenshots-chrome.zip successfully finalized. Artifact ID 3917575909
+2025-09-03T14:49:04.8767432Z Artifact cypress-screenshots-chrome has been successfully uploaded! Final size is 310847 bytes. Artifact ID is 3917575909
+2025-09-03T14:49:04.8774716Z Artifact download URL: https://github.com/RodrigoMD2025/project-orange-hrm-tests-lume/actions/runs/17437037226/artifacts/3917575909
+2025-09-03T14:49:04.8877808Z ##[group]Run echo "## 🧪 Cypress Test Results - chrome" >> $GITHUB_STEP_SUMMARY
+2025-09-03T14:49:04.8878343Z [36;1mecho "## 🧪 Cypress Test Results - chrome" >> $GITHUB_STEP_SUMMARY[0m
+2025-09-03T14:49:04.8878768Z [36;1mecho "| Metric | Value |" >> $GITHUB_STEP_SUMMARY[0m
+2025-09-03T14:49:04.8879124Z [36;1mecho "|--------|-------|" >> $GITHUB_STEP_SUMMARY[0m
+2025-09-03T14:49:04.8879482Z [36;1mecho "| Browser | chrome |" >> $GITHUB_STEP_SUMMARY[0m
+2025-09-03T14:49:04.8879865Z [36;1mecho "| Node Version | 22 |" >> $GITHUB_STEP_SUMMARY[0m
+2025-09-03T14:49:04.8880232Z [36;1mecho "| Status | failure |" >> $GITHUB_STEP_SUMMARY[0m
+2025-09-03T14:49:04.8880711Z [36;1mecho "| Commit | d1b673372f2fb2d95f8d97ac3be931a8c8fbf69a |" >> $GITHUB_STEP_SUMMARY[0m
+2025-09-03T14:49:04.8910582Z shell: /usr/bin/bash -e {0}
+2025-09-03T14:49:04.8910834Z env:
+2025-09-03T14:49:04.8911027Z   NODE_VERSION: 22
+2025-09-03T14:49:04.8911289Z   CYPRESS_CACHE_FOLDER: /home/runner/.cache/Cypress
+2025-09-03T14:49:04.8911628Z   TERM: xterm
+2025-09-03T14:49:04.8912009Z ##[endgroup]
+2025-09-03T14:49:04.9021133Z Post job cleanup.
+2025-09-03T14:49:04.9945111Z [command]/usr/bin/git version
+2025-09-03T14:49:04.9981041Z git version 2.51.0
+2025-09-03T14:49:05.0023985Z Temporarily overriding HOME='/home/runner/work/_temp/105dca7a-5b2d-48ec-953d-8e045edd5df6' before making global git config changes
+2025-09-03T14:49:05.0025496Z Adding repository directory to the temporary git global config as a safe directory
+2025-09-03T14:49:05.0037624Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/project-orange-hrm-tests-lume/project-orange-hrm-tests-lume
+2025-09-03T14:49:05.0071893Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-09-03T14:49:05.0104613Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-09-03T14:49:05.0330841Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-09-03T14:49:05.0352438Z http.https://github.com/.extraheader
+2025-09-03T14:49:05.0365713Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-09-03T14:49:05.0396979Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-09-03T14:49:05.0722308Z Cleaning up orphan processes

@@ -1,0 +1,24 @@
+﻿2025-09-03T14:40:43.3762822Z ##[group]Run actions/setup-node@v4
+2025-09-03T14:40:43.3763835Z with:
+2025-09-03T14:40:43.3764507Z   node-version: 22
+2025-09-03T14:40:43.3765239Z   cache: npm
+2025-09-03T14:40:43.3765947Z   always-auth: false
+2025-09-03T14:40:43.3766913Z   check-latest: false
+2025-09-03T14:40:43.3767932Z   token: ***
+2025-09-03T14:40:43.3768825Z env:
+2025-09-03T14:40:43.3769470Z   NODE_VERSION: 22
+2025-09-03T14:40:43.3770202Z ##[endgroup]
+2025-09-03T14:40:43.5596012Z Found in cache @ /opt/hostedtoolcache/node/22.19.0/x64
+2025-09-03T14:40:43.5601942Z ##[group]Environment details
+2025-09-03T14:40:46.4222163Z node: v22.19.0
+2025-09-03T14:40:46.4222763Z npm: 10.9.3
+2025-09-03T14:40:46.4223105Z yarn: 1.22.22
+2025-09-03T14:40:46.4227323Z ##[endgroup]
+2025-09-03T14:40:46.4245845Z [command]/opt/hostedtoolcache/node/22.19.0/x64/bin/npm config get cache
+2025-09-03T14:40:46.7201858Z /home/runner/.npm
+2025-09-03T14:40:46.8843191Z Cache hit for: node-cache-Linux-x64-npm-ffba805d73e12b64e490d6c8ae65162c516d6cdd4af6672d36855584cad6350a
+2025-09-03T14:40:47.7641202Z Received 9500241 of 9500241 (100.0%), 13.3 MBs/sec
+2025-09-03T14:40:47.7642211Z Cache Size: ~9 MB (9500241 B)
+2025-09-03T14:40:47.7664926Z [command]/usr/bin/tar -xf /home/runner/work/_temp/4378ee97-a4ec-485f-a18c-de790063974b/cache.tzst -P -C /home/runner/work/project-orange-hrm-tests-lume/project-orange-hrm-tests-lume --use-compress-program unzstd
+2025-09-03T14:40:47.8305184Z Cache restored successfully
+2025-09-03T14:40:47.8329049Z Cache restored from key: node-cache-Linux-x64-npm-ffba805d73e12b64e490d6c8ae65162c516d6cdd4af6672d36855584cad6350a
