@@ -7,7 +7,17 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cypress run",
+    "test:headless": "cypress run --headless",
+    "test:chrome": "cypress run --browser chrome",
+    "test:firefox": "cypress run --browser firefox",
+    "test:record": "cypress run --record",
+    "test:open": "cypress open",
+    "test:ci": "cypress run --browser chrome --headless --record",
+    "cypress:verify": "cypress verify",
+    "cypress:info": "cypress info",
+    "reports:clean": "rm -rf cypress/reports cypress/videos cypress/screenshots",
+    "reports:open": "start cypress/reports/html/index.html"
   },
   "devDependencies": {
     "cypress": "^13.15.0",

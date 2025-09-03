@@ -24,11 +24,31 @@
       "email": "carlos.oliveira@company.com",
       "phone": "+55 11 99999-9999"
     },
-    "updateEmployee": {
+    "userUpdate": {
       "firstName": "Ana",
-      "lastName": "Costa",
-      "employeeId": "EMP2024002",
-      "email": "ana.costa@company.com"
+      "lastName": "Silva",
+      "nickname": "AnaTest",
+      "employeeId": "EMP1234",
+      "otherId": "OID5678",
+      "driversLicense": "DL99999",
+      "licenseExpiry": "2025-12-31",
+      "ssn": "123-45-6789",
+      "sin": "987654321",
+      "nationality": "Albanian",
+      "maritalStatus": "Single"
+    },
+    "invalidUserUpdate": {
+      "firstName": "",
+      "lastName": "",
+      "nickname": "InvalidNick",
+      "employeeId": "INV-ID",
+      "otherId": "INV-OTHER",
+      "driversLicense": "INV-LIC",
+      "licenseExpiry": "2025-01-01",
+      "ssn": "000-00-0000",
+      "sin": "000000000",
+      "nationality": "",
+      "maritalStatus": ""
     }
   },
   "timesheet": {
